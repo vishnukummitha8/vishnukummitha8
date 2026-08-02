@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSW Motors | MES Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="portal">
+      <div class="ambient"></div>
+
+      <header class="brand-tab" aria-label="JSW Motors">
+        <svg class="brand-logo" viewBox="0 0 290 78" role="img" aria-label="JSW Motors logo">
+          <path class="red-mark" d="M97 6c-23 2-43 15-57 30l35-9c13-5 25-11 37-21l-15 0z"/>
+          <path class="blue-mark" d="M20 50C6 55 0 62 0 69h46l29-28H48C40 42 29 45 20 50zm61-26-24 47h29l22-47H81zm35 0-23 47h29l22-47h-28zm36 0-23 47h26l19-47h-22z"/>
+          <text x="155" y="64" class="logo-text">Motors</text>
+        </svg>
+      </header>
+
+      <section class="intro" aria-labelledby="welcome-title">
+        <h1 id="welcome-title">Driving Tomorrow.<br />Building <span>Excellence</span> Today.</h1>
+        <p class="subtitle">Smart Manufacturing. Seamless Execution.</p>
+        <p class="benefits">Real-time Visibility <i></i> Integrated Operations <i></i> Quality Assured</p>
+      </section>
+
+      <section class="feature-cards" aria-label="MES capabilities">
+        <article class="feature-card">
+          <div class="feature-icon production-icon">⚙</div>
+          <h2>Production<br />Management</h2>
+          <p>Plan | Execute | Monitor</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon shield-icon">♢</div>
+          <h2>Quality<br />Management</h2>
+          <p>Assure | Control | Improve</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon chart-icon">↗</div>
+          <h2>Performance<br />Dashboards</h2>
+          <p>Insights | Analytics | KPI</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon barcode-icon">▥</div>
+          <h2>Traceability<br />&amp; Reporting</h2>
+          <p>Track | Trace | Report</p>
+        </article>
+      </section>
+
+      <section class="login-panel" aria-label="MES sign in">
+        <div class="login-header">
+          <svg class="panel-logo" viewBox="0 0 290 78" aria-hidden="true">
+            <path class="red-mark" d="M97 6c-23 2-43 15-57 30l35-9c13-5 25-11 37-21l-15 0z"/>
+            <path class="blue-mark" d="M20 50C6 55 0 62 0 69h46l29-28H48C40 42 29 45 20 50zm61-26-24 47h29l22-47H81zm35 0-23 47h29l22-47h-28zm36 0-23 47h26l19-47h-22z"/>
+            <text x="155" y="64" class="logo-text">Motors</text>
+          </svg>
+          <strong>Better Everyday</strong>
+        </div>
+        <div class="separator"><span>⌁</span></div>
+        <h2>MES</h2>
+        <p class="system-name">Manufacturing Execution System</p>
+        <form>
+          <label class="input-row">
+            <span class="input-icon">♙</span>
+            <input aria-label="Username" type="text" placeholder="Username" />
+          </label>
+          <label class="input-row">
+            <span class="input-icon">♙</span>
+            <input aria-label="Password" type="password" placeholder="Password" />
+            <button class="eye" type="button" aria-label="Show password">◉</button>
+          </label>
+          <label class="input-row select-row">
+            <span class="input-icon">♜</span>
+            <select aria-label="Select plant">
+              <option value="">Select Plant</option>
+              <option>Delhi Plant</option>
+              <option>Pune Plant</option>
+              <option>Chennai Plant</option>
+            </select>
+          </label>
+          <button class="login-button" type="submit"><span>↪</span> Login</button>
+          <div class="form-foot">
+            <label class="remember"><input type="checkbox" /> <span>Remember me</span></label>
+            <a href="#">Forgot Password?</a>
+          </div>
+        </form>
+        <div class="panel-bottom">
+          <div class="car-line">⌁</div>
+          <p>Innovate. Integrate. <span>Inspire the Future.</span></p>
+        </div>
+      </section>
+
+      <footer>
+        <p><span>One</span> Plant. <span>One</span> Process. <span>One</span> System.</p>
+        <div class="footer-links">
+          <span>♢ &nbsp; Secure Access</span><b></b>
+          <span>◷ &nbsp; Real-time Data</span><b></b>
+          <span>⌘ &nbsp; Connected Operations</span>
+        </div>
+        <small>© 2025 JSW Motors Limited. All Rights Reserved.</small>
+      </footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
