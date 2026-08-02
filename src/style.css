@@ -706,6 +706,8 @@ button {
 @media (max-width: 760px) {
   .page-shell {
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     padding: 92px 18px 112px;
     background-position: 44% center;
   }
@@ -739,6 +741,7 @@ button {
   }
 
   .hero-copy {
+    order: 1;
     max-width: 500px;
     margin: 20px auto 28px;
     text-align: center;
@@ -754,6 +757,7 @@ button {
   }
 
   .login-panel {
+    order: 2;
     width: min(100%, 460px);
     min-height: 650px;
     margin: 0 auto;
@@ -764,6 +768,7 @@ button {
   }
 
   .capabilities {
+    order: 3;
     width: min(100%, 460px);
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
@@ -771,6 +776,7 @@ button {
   }
 
   .site-footer {
+    order: 4;
     width: calc(100% + 36px);
     height: auto;
     grid-template-columns: 1fr;
