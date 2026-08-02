@@ -1,0 +1,45 @@
+@import '@fontsource-variable/inter';
+@import '@fontsource/archivo-black';
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter Variable', 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Archivo Black', 'Inter Variable', ui-sans-serif, sans-serif;
+
+  /* JSW brand palette */
+  --color-jsw-red: #e1251b;
+  --color-jsw-red-bright: #ef3325;
+  --color-jsw-blue: #16357f;
+  --color-jsw-blue-light: #1f4bab;
+  --color-jsw-navy: #0b2059;
+  --color-jsw-navy-deep: #071736;
+  --color-jsw-ink: #0a1329;
+
+  /* Surface tokens */
+  --color-field: #f1f4f9;
+  --color-field-border: #dbe2ee;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--color-jsw-ink);
+  }
+}
+
+@utility clip-banner {
+  clip-path: polygon(0 0, 100% 0, calc(100% - 46px) 100%, 0 100%);
+}
+
+@utility text-balance-tight {
+  text-wrap: balance;
+}
