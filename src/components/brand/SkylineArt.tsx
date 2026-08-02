@@ -13,7 +13,7 @@ export function SkylineArt({ className }: { className?: string }) {
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"
-      preserveAspectRatio="xMidYEnd meet"
+      preserveAspectRatio="xMidYMax meet"
     >
       {/* Ground */}
       <path d="M0 101h360" strokeOpacity="0.55" />

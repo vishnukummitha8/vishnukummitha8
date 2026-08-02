@@ -45,6 +45,14 @@ export function LoginCard() {
     }
   }, [])
 
+  /** Any edit dismisses the previous validation message. */
+  function edit<T>(apply: (value: T) => void) {
+    return (value: T) => {
+      apply(value)
+      setError(null)
+    }
+  }
+
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
     if (isSubmitting) return
@@ -69,13 +77,13 @@ export function LoginCard() {
   }
 
   return (
-    <aside className="flex w-full shrink-0 items-center justify-center px-6 pt-2 pb-8 lg:w-[27rem] lg:px-8 lg:py-6">
+    <aside className="flex w-full shrink-0 items-center justify-center px-6 pt-2 pb-8 lg:w-[26.5rem] lg:px-8 lg:py-4">
       <form
         onSubmit={handleSubmit}
         noValidate
-        className="flex h-full max-h-[42rem] w-full max-w-[23rem] flex-col overflow-hidden rounded-xl bg-white shadow-[0_28px_70px_-20px_rgba(2,8,23,0.85)] ring-1 ring-white/50"
+        className="flex h-full max-h-[40rem] w-full max-w-[22.5rem] flex-col overflow-hidden rounded-xl bg-white shadow-[0_28px_70px_-20px_rgba(2,8,23,0.85)] ring-1 ring-white/50"
       >
-        <div className="flex flex-1 flex-col px-7 pt-7 pb-5">
+        <div className="flex flex-1 flex-col px-7 pt-6 pb-4">
           {/* Identity */}
           <JswLogo className="mx-auto h-10 w-auto" />
           <p className="mt-1.5 text-center text-[13px] font-semibold tracking-[0.01em] text-jsw-red">
@@ -106,7 +114,7 @@ export function LoginCard() {
                   autoComplete="username"
                   placeholder="Username"
                   value={username}
-                  onChange={(event) => setUsername(event.target.value)}
+                  onChange={(event) => edit(setUsername)(event.target.value)}
                   className={fieldInput}
                 />
               </div>
@@ -125,7 +133,7 @@ export function LoginCard() {
                   autoComplete="current-password"
                   placeholder="Password"
                   value={password}
-                  onChange={(event) => setPassword(event.target.value)}
+                  onChange={(event) => edit(setPassword)(event.target.value)}
                   className={fieldInput}
                 />
                 <button
@@ -154,7 +162,7 @@ export function LoginCard() {
                   id={plantId}
                   name="plant"
                   value={plant}
-                  onChange={(event) => setPlant(event.target.value)}
+                  onChange={(event) => edit(setPlant)(event.target.value)}
                   className={`${fieldInput} cursor-pointer appearance-none pr-6 ${
                     plant ? 'text-slate-800' : 'text-slate-400'
                   }`}
@@ -164,7 +172,7 @@ export function LoginCard() {
                   </option>
                   {PLANTS.map((option) => (
                     <option key={option.code} value={option.code} className="text-slate-800">
-                      {option.code} — {option.name}
+                      {option.name}
                     </option>
                   ))}
                 </select>
@@ -208,16 +216,24 @@ export function LoginCard() {
               htmlFor={rememberId}
               className="flex cursor-pointer items-center gap-2 text-[11.5px] font-medium text-slate-600 select-none"
             >
-              <span className="relative flex h-[15px] w-[15px] items-center justify-center">
+              <span className="relative flex h-[15px] w-[15px] shrink-0">
                 <input
                   id={rememberId}
                   name="remember"
                   type="checkbox"
                   checked={remember}
                   onChange={(event) => setRemember(event.target.checked)}
-                  className="peer h-[15px] w-[15px] cursor-pointer appearance-none rounded-[3px] border border-slate-300 bg-white transition-colors checked:border-jsw-blue checked:bg-jsw-blue focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-jsw-blue-light"
+                  className="peer absolute inset-0 z-10 m-0 h-full w-full cursor-pointer appearance-none opacity-0"
                 />
-                <CheckIcon className="pointer-events-none absolute h-2.5 w-2.5 text-white opacity-0 peer-checked:opacity-100" />
+                <span
+                  className={`flex h-full w-full items-center justify-center rounded-[3px] border transition-colors peer-focus-visible:ring-2 peer-focus-visible:ring-jsw-blue-light/50 peer-focus-visible:ring-offset-1 ${
+                    remember ? 'border-jsw-blue bg-jsw-blue' : 'border-slate-300 bg-white'
+                  }`}
+                >
+                  <CheckIcon
+                    className={`h-2.5 w-2.5 text-white transition-opacity ${remember ? 'opacity-100' : 'opacity-0'}`}
+                  />
+                </span>
               </span>
               Remember me
             </label>
@@ -232,8 +248,8 @@ export function LoginCard() {
         </div>
 
         {/* Vision strip */}
-        <div className="relative overflow-hidden bg-linear-to-b from-jsw-blue-light to-jsw-blue px-5 pt-2 pb-3">
-          <SkylineArt className="h-[74px] w-full text-white/45" />
+        <div className="relative overflow-hidden bg-linear-to-b from-jsw-blue-light to-jsw-blue px-5 pt-1.5 pb-2.5">
+          <SkylineArt className="h-[68px] w-full text-white/45" />
           <p className="mt-1 text-center text-[11.5px] font-semibold tracking-[0.01em] text-white">
             Innovate. Integrate. <span className="text-jsw-red-bright">Inspire the Future.</span>
           </p>

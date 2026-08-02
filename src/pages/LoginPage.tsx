@@ -16,11 +16,11 @@ export function LoginPage() {
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-linear-to-r from-jsw-navy-deep/92 via-jsw-navy-deep/60 to-jsw-navy-deep/35"
+        className="absolute inset-0 bg-linear-to-r from-jsw-navy-deep/88 via-jsw-navy-deep/45 to-jsw-navy-deep/20"
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-linear-to-t from-jsw-ink/90 via-transparent to-jsw-ink/45"
+        className="absolute inset-0 bg-linear-to-t from-jsw-ink/85 via-transparent to-jsw-ink/35"
       />
 
       <BrandBanner />

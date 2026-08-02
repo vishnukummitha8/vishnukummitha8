@@ -5,9 +5,9 @@ const PROMISES = ['Real-time Visibility', 'Integrated Operations', 'Quality Assu
 
 export function HeroSection() {
   return (
-    <section className="flex min-w-0 flex-1 flex-col pt-24 pr-4 pb-6 pl-8 sm:pt-28 sm:pl-10 lg:pt-32 lg:pl-14">
+    <section className="flex min-w-0 flex-1 flex-col pt-24 pr-4 pb-4 pl-8 sm:pt-26 sm:pl-10 lg:pl-12">
       <div className="max-w-[36rem]">
-        <h1 className="font-sans text-[30px] leading-[1.16] font-extrabold tracking-[-0.02em] text-white drop-shadow-[0_3px_18px_rgba(2,8,23,0.85)] sm:text-[36px] lg:text-[42px]">
+        <h1 className="font-sans text-[clamp(1.75rem,3.3vw,2.75rem)] leading-[1.15] font-extrabold tracking-[-0.02em] text-white drop-shadow-[0_3px_18px_rgba(2,8,23,0.85)]">
           Driving Tomorrow.
           <br />
           Building <span className="text-jsw-red-bright">Excellence</span> Today.
@@ -27,7 +27,7 @@ export function HeroSection() {
         </p>
       </div>
 
-      <div className="mt-10 grid max-w-[38rem] grid-cols-2 gap-3 sm:grid-cols-4 lg:mt-auto">
+      <div className="mt-10 grid max-w-[32rem] grid-cols-2 gap-2.5 sm:grid-cols-4 lg:mt-auto">
         {FEATURES.map((feature) => (
           <FeatureCard key={feature.id} feature={feature} />
         ))}

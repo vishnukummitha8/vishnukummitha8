@@ -14,7 +14,7 @@ export function JswLogo({ variant = 'dark', className, title = 'JSW Motors' }: J
 
   return (
     <svg
-      viewBox="0 0 322 96"
+      viewBox="0 0 352 98"
       role="img"
       aria-label={title}
       className={className}
