@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#ffffff" />
+  <path d="M8 30 C20 22 34 16 50 12 C36 21 22 28 11 34 Z" fill="#e2231a" />
+  <text
+    x="32"
+    y="52"
+    text-anchor="middle"
+    font-family="Inter, Arial, Helvetica, sans-serif"
+    font-size="26"
+    font-weight="900"
+    fill="#0b3a93"
+    transform="skewX(-8)"
+    transform-origin="32 52"
+  >
+    JSW
+  </text>
+</svg>

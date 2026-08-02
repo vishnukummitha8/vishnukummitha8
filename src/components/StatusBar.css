@@ -1,0 +1,90 @@
+.statusbar {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 1.4vw, 22px);
+  height: var(--statusbar-height);
+  padding: 0 clamp(16px, 2.6vw, 44px);
+  background: linear-gradient(90deg, #061631 0%, #08203f 55%, #061631 100%);
+  border-top: 1px solid rgba(120, 160, 220, 0.16);
+  color: #cddaeb;
+  font-size: clamp(10px, 0.79vw, 13px);
+  letter-spacing: 0.2px;
+}
+
+.statusbar__motto {
+  margin: 0;
+  color: #ffffff;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.statusbar__one {
+  color: var(--jsw-red-bright);
+}
+
+.statusbar__rule {
+  width: 1px;
+  height: 16px;
+  background: rgba(140, 175, 220, 0.32);
+  flex: none;
+}
+
+.statusbar__rule--tail {
+  margin-left: auto;
+}
+
+.statusbar__assurances {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 2vw, 34px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  min-width: 0;
+}
+
+.statusbar__assurances li {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+}
+
+.statusbar__icon {
+  width: 14px;
+  height: 14px;
+  color: #9dc0ea;
+  flex: none;
+}
+
+.statusbar__legal {
+  margin: 0;
+  color: #93a6c2;
+  white-space: nowrap;
+}
+
+@media (max-width: 1080px) {
+  .statusbar {
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 16px;
+    padding: 12px 16px;
+    text-align: center;
+  }
+
+  .statusbar__rule--tail {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .statusbar__rule {
+    display: none;
+  }
+
+  .statusbar__assurances {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

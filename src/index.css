@@ -1,0 +1,93 @@
+:root {
+  /* Brand */
+  --jsw-blue: #0b3a93;
+  --jsw-blue-deep: #072a6b;
+  --jsw-blue-ink: #0a2a63;
+  --jsw-red: #e2231a;
+  --jsw-red-bright: #f4353a;
+
+  /* Surfaces */
+  --night: #04122e;
+  --night-soft: #0a1f45;
+  --card: #ffffff;
+  --field: #f3f6fb;
+  --field-border: #dde4ef;
+
+  /* Text */
+  --ink: #12213d;
+  --ink-muted: #64748b;
+  --on-dark: #ffffff;
+  --on-dark-muted: #c3d3ea;
+  --on-dark-accent: #86b2e8;
+
+  /* Ergonomics */
+  --radius-card: 14px;
+  --radius-field: 9px;
+  --focus-ring: 0 0 0 3px rgba(31, 106, 214, 0.28);
+
+  color-scheme: light;
+  font-family: 'Inter Variable', 'Inter', 'Segoe UI', Roboto, Helvetica, Arial,
+    sans-serif;
+  font-synthesis-weight: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--night);
+  color: var(--ink);
+  min-height: 100dvh;
+}
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid #2f7ae5;
+  outline-offset: 2px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
