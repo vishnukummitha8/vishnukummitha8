@@ -1,0 +1,585 @@
+/* ============================================================
+   JSW Motors — MES Login Page
+   ============================================================ */
+
+:root {
+  --jsw-blue: #17469e;
+  --jsw-blue-deep: #0c1f4a;
+  --jsw-navy: #0a1533;
+  --jsw-royal: #1b3f94;
+  --jsw-red: #e31e24;
+  --text-light: #f4f7fc;
+  --text-muted: #8b93a7;
+  --card-navy: rgba(10, 21, 51, 0.82);
+  --field-border: #d7dce6;
+  --radius-lg: 18px;
+  --radius-md: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  background-color: var(--jsw-navy);
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.accent-red {
+  color: var(--jsw-red);
+}
+
+/* ============================================================
+   Page layout — hero fills the screen, login card overlaps it
+   ============================================================ */
+
+.page {
+  position: relative;
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+/* ----------------------- HERO (left) ----------------------- */
+
+.hero {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 32px 28px 40px;
+  background:
+    linear-gradient(100deg, rgba(6, 14, 36, 0.78) 0%, rgba(8, 20, 52, 0.45) 45%, rgba(8, 20, 52, 0.55) 100%),
+    url("../assets/factory-bg.jpg") center / cover no-repeat;
+}
+
+/* White swoosh corner holding the logo */
+.brand-corner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 92px;
+  background: #ffffff;
+  clip-path: polygon(0 0, 100% 0, 78% 100%, 0 100%);
+  border-bottom-right-radius: 60px;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+  z-index: 5;
+}
+
+.brand-corner__logo {
+  height: 46px;
+  width: auto;
+}
+
+/* Hero text */
+.hero__content {
+  margin-bottom: auto;
+  padding-top: 150px;
+  max-width: 640px;
+}
+
+.hero__title {
+  font-size: clamp(28px, 3.2vw, 46px);
+  font-weight: 800;
+  line-height: 1.22;
+  letter-spacing: 0.2px;
+  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.55);
+}
+
+.hero__subtitle {
+  margin-top: 18px;
+  font-size: clamp(15px, 1.35vw, 19px);
+  font-weight: 500;
+  color: #e8edf7;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+.hero__taglines {
+  margin-top: 10px;
+  font-size: clamp(12.5px, 1.05vw, 15px);
+  font-weight: 500;
+  color: #dfe6f2;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero__taglines .sep {
+  color: var(--jsw-red);
+  margin: 0 10px;
+  font-weight: 700;
+}
+
+/* ----------------------- Feature cards ----------------------- */
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 34px;
+  max-width: 760px;
+}
+
+.feature-card {
+  background: var(--card-navy);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: 20px 14px 16px;
+  text-align: center;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(227, 30, 36, 0.55);
+}
+
+.feature-card__icon {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 12px;
+}
+
+.feature-card__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.feature-card__title {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  line-height: 1.45;
+  color: #ffffff;
+}
+
+.feature-card__meta {
+  margin-top: 8px;
+  white-space: nowrap;
+  font-size: 10px;
+  font-weight: 500;
+  color: #aeb8cc;
+  letter-spacing: 0.3px;
+}
+
+.feature-card__meta span {
+  color: var(--jsw-red);
+  margin: 0 3px;
+}
+
+/* ----------------------- LOGIN (right) ----------------------- */
+
+.login-wrap {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 26px 34px;
+  background: linear-gradient(260deg, rgba(6, 14, 36, 0.55), rgba(6, 14, 36, 0.15));
+}
+
+.login-card {
+  width: 400px;
+  max-width: 92vw;
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.55);
+  display: flex;
+  flex-direction: column;
+}
+
+.login-card__top {
+  padding: 30px 34px 24px;
+  text-align: center;
+}
+
+.login-card__logo {
+  height: 44px;
+}
+
+.login-card__tagline {
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--jsw-red);
+}
+
+/* Divider with car glyph */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 18px 0 10px;
+}
+
+.divider__line {
+  flex: 1;
+  height: 1px;
+  background: #d9dee8;
+}
+
+.divider__car {
+  width: 56px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.login-card__mes {
+  font-size: 52px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: var(--jsw-blue-deep);
+  line-height: 1.05;
+}
+
+.login-card__system {
+  margin-top: 2px;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 2.6px;
+  text-transform: uppercase;
+  color: #3c465c;
+}
+
+/* Form */
+.login-form {
+  margin-top: 22px;
+  text-align: left;
+}
+
+.field {
+  position: relative;
+  margin-bottom: 14px;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  height: 48px;
+  padding: 0 44px 0 44px;
+  font-family: inherit;
+  font-size: 14.5px;
+  color: #1c2740;
+  background: #ffffff;
+  border: 1.5px solid var(--field-border);
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  appearance: none;
+}
+
+.field input::placeholder {
+  color: #9aa3b5;
+}
+
+.field select:invalid,
+.field select option[value=""] {
+  color: #9aa3b5;
+}
+
+.field select option {
+  color: #1c2740;
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: var(--jsw-royal);
+  box-shadow: 0 0 0 3px rgba(23, 70, 158, 0.12);
+}
+
+.field.field--error input,
+.field.field--error select {
+  border-color: var(--jsw-red);
+}
+
+.field__icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  color: #7d8698;
+  pointer-events: none;
+}
+
+.field__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.field__eye {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 26px;
+  height: 26px;
+  padding: 2px;
+  border: none;
+  background: none;
+  color: #7d8698;
+  cursor: pointer;
+}
+
+.field__eye:hover {
+  color: var(--jsw-royal);
+}
+
+.field__eye svg {
+  width: 100%;
+  height: 100%;
+}
+
+.field__eye svg[hidden] {
+  display: none;
+}
+
+.field__chevron {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: #7d8698;
+  pointer-events: none;
+}
+
+.field__chevron svg {
+  width: 100%;
+  height: 100%;
+}
+
+.form-error {
+  margin: -4px 0 10px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--jsw-red);
+}
+
+/* Login button */
+.btn-login {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #1e4aa8, #163c8c);
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: filter 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 8px 20px rgba(23, 70, 158, 0.35);
+}
+
+.btn-login svg {
+  width: 20px;
+  height: 20px;
+}
+
+.btn-login:hover {
+  filter: brightness(1.12);
+}
+
+.btn-login:active {
+  transform: scale(0.985);
+}
+
+.btn-login:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+/* Remember / forgot */
+.form-footer {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #3c465c;
+  cursor: pointer;
+  user-select: none;
+}
+
+.remember input {
+  width: 15px;
+  height: 15px;
+  accent-color: var(--jsw-royal);
+  cursor: pointer;
+}
+
+.forgot {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--jsw-royal);
+  text-decoration: none;
+}
+
+.forgot:hover {
+  text-decoration: underline;
+}
+
+/* Blue bottom panel of the card */
+.login-card__bottom {
+  background:
+    radial-gradient(120% 140% at 50% -20%, #2450b4 0%, var(--jsw-royal) 55%, #142f74 100%);
+  padding: 18px 20px 20px;
+  text-align: center;
+}
+
+.cityscape {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.login-card__motto {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.3px;
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding: 14px 40px;
+  background: #071129;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer__slogan {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.3px;
+}
+
+.footer__badges {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+  list-style: none;
+}
+
+.footer__badges li {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #c3ccdf;
+}
+
+.footer__badges svg {
+  width: 19px;
+  height: 19px;
+  color: #e8edf7;
+}
+
+.footer__copy {
+  font-size: 12.5px;
+  color: #8b93a7;
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+
+@media (max-width: 1180px) {
+  .features {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 520px;
+  }
+}
+
+@media (max-width: 940px) {
+  .page {
+    flex-direction: column;
+    overflow: visible;
+  }
+
+  .hero {
+    padding-bottom: 36px;
+  }
+
+  .hero__content {
+    padding-top: 130px;
+  }
+
+  .login-wrap {
+    padding: 32px 20px 40px;
+    background: linear-gradient(180deg, #0a1533, #0e1c42);
+  }
+
+  .footer {
+    justify-content: center;
+    text-align: center;
+    row-gap: 10px;
+  }
+}
+
+@media (max-width: 560px) {
+  .features {
+    grid-template-columns: 1fr;
+    max-width: 340px;
+  }
+
+  .brand-corner {
+    width: 230px;
+    height: 74px;
+    padding-left: 20px;
+  }
+
+  .brand-corner__logo {
+    height: 36px;
+  }
+
+  .footer__badges {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

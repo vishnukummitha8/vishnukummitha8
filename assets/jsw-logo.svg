@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 120" role="img" aria-label="JSW Motors">
+  <style>
+    .jsw  { font-family: Arial, Helvetica, sans-serif; font-weight: 900; font-style: italic; font-size: 86px; fill: #17469e; letter-spacing: -3px; }
+    .mot  { font-family: Arial, Helvetica, sans-serif; font-weight: 700; font-size: 62px; fill: #17469e; }
+  </style>
+  <!-- Red flame / flag swoosh -->
+  <path d="M78 30 C 96 6, 148 -4, 186 6 C 158 6, 128 14, 112 30 C 124 22, 148 20, 160 24 C 136 26, 116 36, 106 46 C 100 36, 88 31, 78 30 Z" fill="#e31e24"/>
+  <path d="M60 38 C 74 24, 96 18, 112 20 C 96 26, 84 34, 78 44 C 73 39, 66 38, 60 38 Z" fill="#e31e24"/>
+  <text class="jsw" x="8" y="100">JSW</text>
+  <text class="mot" x="228" y="98">Motors</text>
+</svg>
