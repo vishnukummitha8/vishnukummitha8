@@ -39,6 +39,7 @@ export function LoginCard() {
   const usernameRef = useRef<HTMLInputElement>(null)
   const passwordRef = useRef<HTMLInputElement>(null)
   const plantRef = useRef<HTMLSelectElement>(null)
+  const feedbackRef = useRef<HTMLParagraphElement>(null)
 
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
@@ -59,6 +60,10 @@ export function LoginCard() {
     }
     if (savedPlant) setPlant(savedPlant)
   }, [])
+
+  useEffect(() => {
+    if (feedback) feedbackRef.current?.scrollIntoView({ block: 'nearest' })
+  }, [feedback])
 
   const validate = (): FieldErrors => {
     const next: FieldErrors = {}
@@ -300,6 +305,7 @@ export function LoginCard() {
           </div>
 
           <p
+            ref={feedbackRef}
             className={`login__feedback${feedback ? ` login__feedback--${feedback.tone}` : ''}`}
             role="status"
             aria-live="polite"

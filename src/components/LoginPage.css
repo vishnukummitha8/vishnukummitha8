@@ -4,7 +4,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 100dvh;
+  height: 100dvh;
+  min-height: 560px;
   overflow: hidden;
   isolation: isolate;
 }
@@ -40,8 +41,8 @@
   z-index: 2;
   display: flex;
   align-items: center;
-  width: clamp(250px, 29vw, 420px);
-  height: clamp(64px, 10.4vh, 100px);
+  width: clamp(258px, 31vw, 460px);
+  height: clamp(70px, 13.6vh, 128px);
   padding-left: clamp(18px, 3vw, 46px);
   padding-right: clamp(34px, 5vw, 72px);
   background: #ffffff;
@@ -50,7 +51,7 @@
 }
 
 .page__brand-logo {
-  width: clamp(120px, 12.6vw, 185px);
+  width: clamp(126px, 14.6vw, 218px);
   height: auto;
 }
 
@@ -66,13 +67,33 @@
   display: flex;
   align-items: stretch;
   justify-content: space-between;
+  overflow: hidden;
   gap: clamp(20px, 4vw, 64px);
   padding: clamp(18px, 3.2vh, 32px) clamp(16px, 2.6vw, 44px)
     clamp(14px, 2.4vh, 26px);
 }
 
+/* Short viewports keep the single-screen layout but may scroll. */
+@media (max-height: 620px) {
+  .page {
+    height: auto;
+    min-height: 100dvh;
+    overflow: visible;
+  }
+
+  .page__stage {
+    overflow: visible;
+  }
+}
+
 @media (max-width: 1080px) {
   .page {
+    height: auto;
+    min-height: 100dvh;
+    overflow: visible;
+  }
+
+  .page__stage {
     overflow: visible;
   }
 

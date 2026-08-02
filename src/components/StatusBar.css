@@ -50,6 +50,14 @@
   white-space: nowrap;
 }
 
+.statusbar__assurances li:not(:last-child)::after {
+  content: '';
+  width: 1px;
+  height: 16px;
+  margin-left: clamp(12px, 2vw, 34px);
+  background: rgba(140, 175, 220, 0.32);
+}
+
 .statusbar__icon {
   width: 14px;
   height: 14px;

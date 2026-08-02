@@ -1,5 +1,5 @@
 {
-  "name": "scaffold",
+  "name": "jsw-motors-mes-login",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -22,5 +22,6 @@
     "oxlint": "^1.75.0",
     "typescript": "~6.0.2",
     "vite": "^8.2.0"
-  }
+  },
+  "description": "JSW Motors Manufacturing Execution System (MES) login experience"
 }

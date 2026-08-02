@@ -131,35 +131,41 @@ export function RobotArmIcon(props: IconProps) {
       <g
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.9"
+        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       >
-        <path d="M4 28h24" />
-        <path d="M8.5 28v-2.6h7V28" />
+        <path d="M3.4 28.6h25.2" />
+        <path d="M6.6 28.6v-2.4a2 2 0 0 1 2-2h5.6a2 2 0 0 1 2 2v2.4" />
       </g>
       <g
         fill="none"
         stroke="var(--jsw-red)"
-        strokeWidth="2.1"
+        strokeWidth="2.4"
         strokeLinecap="round"
         strokeLinejoin="round"
       >
-        <path d="M12 25.4V17l7-6.2" />
-        <path d="m19 10.8 5.6 1.9" />
+        <path d="M11.4 24.2V15" />
+        <path d="M11.4 15 22 9.4" />
       </g>
       <g
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.9"
+        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       >
-        <path d="M24.2 9.4v6.2" />
-        <path d="M21.6 6.2h5.4" />
+        <path d="M22 9.4 26.8 12" />
+        <path d="m26 15.4 3.4-1.8" />
       </g>
-      <circle cx="12" cy="17" r="1.9" fill="currentColor" />
-      <circle cx="19" cy="10.8" r="1.7" fill="var(--jsw-red)" />
+      <circle cx="11.4" cy="15" r="2.3" fill="currentColor" />
+      <circle cx="22" cy="9.4" r="2" fill="var(--jsw-red)" />
+      <path
+        d="M25.4 14.8h3.2"
+        stroke="var(--jsw-red)"
+        strokeWidth="2.4"
+        strokeLinecap="round"
+      />
     </svg>
   )
 }

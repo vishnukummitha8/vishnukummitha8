@@ -1,7 +1,8 @@
 .login {
   display: flex;
   flex-direction: column;
-  width: clamp(340px, 33vw, 470px);
+  container-type: inline-size;
+  width: clamp(340px, 34vw, 540px);
   max-height: 100%;
   overflow: hidden;
   background: var(--card);
@@ -16,6 +17,8 @@
   flex-direction: column;
   flex: 1;
   min-height: 0;
+  overflow-y: auto;
+  scrollbar-width: thin;
   padding: clamp(18px, 3.1vh, 30px) clamp(20px, 2vw, 32px)
     clamp(14px, 2.2vh, 22px);
 }
@@ -31,14 +34,14 @@
 }
 
 .login__logo {
-  width: clamp(150px, 14vw, 205px);
+  width: min(56cqw, 300px);
   height: auto;
 }
 
 .login__tagline {
   margin: clamp(2px, 0.5vh, 6px) 0 0;
   color: var(--jsw-red);
-  font-size: clamp(11px, 1.05vh + 0.35vw, 15px);
+  font-size: max(11px, min(3.7cqw, 2.1vh));
   font-weight: 600;
   letter-spacing: 0.3px;
 }
@@ -71,7 +74,7 @@
 }
 
 .login__divider-car {
-  width: clamp(36px, 3vw, 46px);
+  width: max(34px, 10cqw);
   height: auto;
   color: rgba(11, 58, 147, 0.72);
   flex: none;
@@ -88,7 +91,7 @@
 .login__mes {
   margin: 0;
   color: var(--jsw-blue-ink);
-  font-size: clamp(42px, 7.2vh, 76px);
+  font-size: max(40px, min(19cqw, 8.6vh));
   font-weight: 800;
   line-height: 1;
   letter-spacing: 1.5px;
@@ -97,7 +100,7 @@
 .login__mes-expansion {
   margin: clamp(2px, 0.6vh, 7px) 0 0;
   color: #46587a;
-  font-size: clamp(8.5px, 0.72vw, 12px);
+  font-size: max(8.5px, min(2.7cqw, 1.5vh));
   font-weight: 500;
   letter-spacing: 1.6px;
   text-transform: uppercase;
@@ -110,7 +113,9 @@
 .login__fields {
   display: flex;
   flex-direction: column;
-  gap: clamp(8px, 1.5vh, 15px);
+  justify-content: center;
+  flex: 1;
+  gap: clamp(9px, 1.8vh, 18px);
   margin-top: clamp(12px, 2.4vh, 24px);
 }
 
@@ -125,8 +130,8 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  height: clamp(40px, 5.6vh, 52px);
-  padding: 0 12px;
+  height: max(40px, min(10.6cqw, 6.2vh));
+  padding: 0 max(11px, 2.6cqw);
   background: var(--field);
   border: 1px solid var(--field-border);
   border-radius: var(--radius-field);
@@ -156,8 +161,8 @@
 }
 
 .field__icon {
-  width: clamp(16px, 1.35vw, 20px);
-  height: clamp(16px, 1.35vw, 20px);
+  width: max(16px, 4.2cqw);
+  height: max(16px, 4.2cqw);
   color: #8b98ad;
   flex: none;
 }
@@ -169,7 +174,7 @@
   border: 0;
   background: transparent;
   color: var(--ink);
-  font-size: clamp(12.5px, 1.02vw, 15px);
+  font-size: max(12.5px, min(3.4cqw, 1.9vh));
   outline: none;
 }
 
@@ -252,13 +257,13 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  height: clamp(40px, 5.6vh, 52px);
+  height: max(40px, min(10.8cqw, 6.3vh));
   margin-top: clamp(2px, 0.8vh, 8px);
   border: 0;
   border-radius: var(--radius-field);
   background: linear-gradient(180deg, #0f47ad 0%, #0a3183 100%);
   color: #ffffff;
-  font-size: clamp(13px, 1.05vw, 16px);
+  font-size: max(13px, min(3.7cqw, 2vh));
   font-weight: 700;
   letter-spacing: 1.4px;
   box-shadow: 0 10px 22px rgba(10, 49, 131, 0.32);
@@ -284,8 +289,8 @@
 }
 
 .login__submit-icon {
-  width: clamp(16px, 1.3vw, 19px);
-  height: clamp(16px, 1.3vw, 19px);
+  width: max(16px, 4cqw);
+  height: max(16px, 4cqw);
 }
 
 .login__spinner {
@@ -309,10 +314,11 @@
   justify-content: space-between;
   gap: 12px;
   margin-top: clamp(1px, 0.5vh, 5px);
-  font-size: clamp(10.5px, 0.83vw, 13px);
+  font-size: max(10.5px, min(3cqw, 1.6vh));
 }
 
 .checkbox {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 7px;
@@ -321,11 +327,15 @@
   user-select: none;
 }
 
+/* The native control stays interactive, layered over its styled box. */
 .checkbox input {
   position: absolute;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  margin: 0;
   opacity: 0;
-  width: 0;
-  height: 0;
+  cursor: pointer;
 }
 
 .checkbox__box {
@@ -337,6 +347,7 @@
   border: 1.5px solid #b6c0d0;
   border-radius: 3px;
   background: #ffffff;
+  pointer-events: none;
   transition:
     background 140ms ease,
     border-color 140ms ease;
@@ -421,7 +432,7 @@
 .login__foot {
   position: relative;
   flex: none;
-  min-height: clamp(78px, 14vh, 132px);
+  min-height: max(82px, min(31cqw, 20vh));
   padding: clamp(10px, 1.8vh, 18px) 18px 0;
   background: linear-gradient(180deg, #0f47ad 0%, #0b2f80 100%);
   overflow: hidden;
@@ -433,7 +444,7 @@
   margin: 0;
   text-align: center;
   color: #ffffff;
-  font-size: clamp(11px, 0.92vw, 14.5px);
+  font-size: max(11px, min(3.3cqw, 1.9vh));
   font-weight: 700;
   letter-spacing: 0.2px;
 }
@@ -446,7 +457,7 @@
   position: absolute;
   inset: auto 0 0;
   width: 100%;
-  height: clamp(52px, 9.4vh, 88px);
+  height: max(52px, min(20cqw, 13vh));
   color: rgba(255, 255, 255, 0.34);
 }
 
@@ -454,5 +465,9 @@
   .login {
     width: min(470px, 100%);
     max-height: none;
+  }
+
+  .login__body {
+    overflow-y: visible;
   }
 }

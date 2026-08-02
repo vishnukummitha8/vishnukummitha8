@@ -12,14 +12,14 @@ export function JswLogo({ className, title = 'JSW Motors' }: JswLogoProps) {
   return (
     <svg
       className={className}
-      viewBox="0 0 300 92"
+      viewBox="0 0 372 100"
       role="img"
       aria-label={title}
       xmlns="http://www.w3.org/2000/svg"
     >
       <g fill="var(--jsw-red)">
-        <path d="M20 41C58 22 104 8 163 1c-13 12-31 21-53 29C88 38 62 45 26 51Z" />
-        <path d="M2 55c14-7 30-13 47-18-14 10-27 16-40 22Z" />
+        <path d="M28 34C64 18 112 6 176 0c-13 10-31 18-54 24-27 7-57 8-94 10Z" />
+        <path d="M2 44c11-6 24-11 38-15-9 8-20 13-31 18Z" />
       </g>
       <g
         fill="var(--jsw-blue)"
@@ -28,14 +28,14 @@ export function JswLogo({ className, title = 'JSW Motors' }: JswLogoProps) {
         <text
           x="0"
           y="0"
-          fontSize="72"
+          fontSize="76"
           fontWeight="900"
-          letterSpacing="-3"
-          transform="translate(10 86) skewX(-10)"
+          letterSpacing="-3.5"
+          transform="translate(12 94) skewX(-11)"
         >
           JSW
         </text>
-        <text x="164" y="86" fontSize="52" fontWeight="600" letterSpacing="-1.5">
+        <text x="188" y="94" fontSize="54" fontWeight="600" letterSpacing="-1.4">
           Motors
         </text>
       </g>
