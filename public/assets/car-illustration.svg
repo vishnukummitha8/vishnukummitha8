@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" fill="none">
+  <!-- Wind turbine left -->
+  <line x1="60" y1="100" x2="60" y2="40" stroke="#6BA3D6" stroke-width="2"/>
+  <line x1="60" y1="55" x2="30" y2="35" stroke="#6BA3D6" stroke-width="1.5"/>
+  <line x1="60" y1="55" x2="90" y2="35" stroke="#6BA3D6" stroke-width="1.5"/>
+  <line x1="60" y1="55" x2="60" y2="25" stroke="#6BA3D6" stroke-width="1.5"/>
+  <circle cx="60" cy="55" r="4" fill="#6BA3D6"/>
+  <!-- Tree -->
+  <line x1="340" y1="100" x2="340" y2="65" stroke="#6BA3D6" stroke-width="2"/>
+  <path d="M340 45 C325 60, 325 75, 340 70 C355 75, 355 60, 340 45" stroke="#6BA3D6" stroke-width="1.5" fill="none"/>
+  <path d="M340 55 C328 68, 328 80, 340 76 C352 80, 352 68, 340 55" stroke="#6BA3D6" stroke-width="1.5" fill="none"/>
+  <!-- Car front profile -->
+  <path d="M130 85 L130 70 C130 60, 145 50, 200 48 C255 50, 270 60, 270 70 L270 85" stroke="#6BA3D6" stroke-width="2" fill="none"/>
+  <path d="M145 70 C155 58, 175 52, 200 50 C225 52, 245 58, 255 70" stroke="#6BA3D6" stroke-width="1.5" fill="none"/>
+  <line x1="155" y1="58" x2="155" y2="70" stroke="#6BA3D6" stroke-width="1"/>
+  <line x1="245" y1="58" x2="245" y2="70" stroke="#6BA3D6" stroke-width="1"/>
+  <circle cx="160" cy="85" r="10" stroke="#6BA3D6" stroke-width="2" fill="none"/>
+  <circle cx="240" cy="85" r="10" stroke="#6BA3D6" stroke-width="2" fill="none"/>
+  <line x1="200" y1="48" x2="200" y2="42" stroke="#6BA3D6" stroke-width="1.5"/>
+  <path d="M195 42 L200 38 L205 42" stroke="#6BA3D6" stroke-width="1.5" fill="none"/>
+  <!-- Ground line -->
+  <line x1="20" y1="100" x2="380" y2="100" stroke="#6BA3D6" stroke-width="1" opacity="0.5"/>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 80" fill="none">
+  <path d="M18 18 C28 8, 48 6, 62 14 C50 10, 32 12, 22 22 Z" fill="#E31B23"/>
+  <path d="M22 22 C34 14, 54 12, 72 20 C58 16, 38 18, 26 28 Z" fill="#D71920"/>
+  <text x="8" y="62" font-family="Arial Black, Arial, sans-serif" font-size="38" font-weight="900" font-style="italic" fill="#0045AD">JSW</text>
+  <text x="108" y="62" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="400" fill="#0045AD">Motors</text>
+</svg>
