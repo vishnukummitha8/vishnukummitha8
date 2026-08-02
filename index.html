@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>JSW Motors | MES - Manufacturing Execution System</title>
+<meta name="description" content="JSW Motors MES - Manufacturing Execution System login portal" />
+<link rel="icon" href="assets/jsw-motors-logo.png" type="image/png" />
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="page">
+
+  <!-- Corner logo ribbon -->
+  <div class="corner-ribbon">
+    <img src="assets/jsw-motors-logo.png" alt="JSW Motors" class="corner-logo" />
+  </div>
+
+  <main class="split">
+
+    <!-- LEFT: Hero / background panel -->
+    <section class="hero" aria-label="JSW Motors manufacturing highlights">
+      <div class="hero-media">
+        <img src="assets/factory-background.png" alt="JSW Motors automated production line" />
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Driving Tomorrow.<br />
+          Building <span class="accent">Excellence</span> Today.
+        </h1>
+        <p class="hero-subtitle">Smart Manufacturing. Seamless Execution.</p>
+        <p class="hero-tags">
+          <span>Real-time Visibility</span>
+          <span class="sep">|</span>
+          <span>Integrated Operations</span>
+          <span class="sep">|</span>
+          <span>Quality Assured</span>
+        </p>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-industry"></i></div>
+            <h3>Production Management</h3>
+            <p>Plan | Execute | Monitor</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3>Quality Management</h3>
+            <p>Assure | Control | Improve</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <h3>Performance Dashboards</h3>
+            <p>Insights | Analytics | KPI</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-barcode"></i></div>
+            <h3>Traceability &amp; Reporting</h3>
+            <p>Track | Trace | Report</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RIGHT: Login panel -->
+    <section class="login-panel" aria-label="Login">
+      <div class="login-panel-inner">
+
+        <div class="login-card">
+          <div class="brand">
+            <img src="assets/jsw-motors-logo.png" alt="JSW Motors logo" class="brand-logo" />
+            <p class="brand-tagline">Better Everyday</p>
+          </div>
+
+          <hr class="divider" />
+
+          <div class="system-title">
+            <i class="fa-solid fa-car-side system-icon"></i>
+            <h2>MES</h2>
+            <p>MANUFACTURING EXECUTION SYSTEM</p>
+          </div>
+
+          <form id="loginForm" novalidate>
+            <div class="field">
+              <i class="fa-solid fa-user field-icon"></i>
+              <input type="text" id="username" name="username" placeholder="Username" autocomplete="username" required />
+            </div>
+
+            <div class="field">
+              <i class="fa-solid fa-lock field-icon"></i>
+              <input type="password" id="password" name="password" placeholder="Password" autocomplete="current-password" required />
+              <button type="button" class="toggle-password" id="togglePassword" aria-label="Show password">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+
+            <div class="field select-field">
+              <i class="fa-solid fa-building field-icon"></i>
+              <select id="plant" name="plant" required>
+                <option value="" disabled selected>Select Plant</option>
+                <option value="vidyanagar">Vidyanagar Plant</option>
+                <option value="gujarat">Gujarat Plant</option>
+                <option value="talegaon">Talegaon Plant</option>
+                <option value="mysuru">Mysuru Plant</option>
+              </select>
+            </div>
+
+            <button type="submit" class="login-btn">
+              <i class="fa-solid fa-arrow-right-to-bracket"></i> LOGIN
+            </button>
+
+            <div class="form-footer">
+              <label class="remember">
+                <input type="checkbox" id="remember" name="remember" />
+                <span>Remember me</span>
+              </label>
+              <a href="#" class="forgot">Forgot Password?</a>
+            </div>
+          </form>
+
+          <p id="formMessage" class="form-message" role="status"></p>
+        </div>
+
+        <div class="inspire-banner">
+          <div class="inspire-illustration" aria-hidden="true">
+            <i class="fa-solid fa-car"></i>
+            <i class="fa-solid fa-wind fa-flip-horizontal"></i>
+            <i class="fa-solid fa-tree"></i>
+          </div>
+          <p>Innovate. <span class="accent">Integrate.</span> Inspire the Future.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p class="footer-tagline"><span class="accent">One</span> Plant. One Process. One System.</p>
+    <ul class="footer-badges">
+      <li><i class="fa-solid fa-shield-halved"></i> Secure Access</li>
+      <li><i class="fa-regular fa-clock"></i> Real-time Data</li>
+      <li><i class="fa-solid fa-diagram-project"></i> Connected Operations</li>
+    </ul>
+    <p class="footer-copy">&copy; <span id="year"></span> JSW Motors Limited. All Rights Reserved.</p>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
