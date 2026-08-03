@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DELMIA Apriso MES &mdash; Station 02 | Front Suspension Assembly</title>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- ============================================================
+     SVG ICON SPRITE
+     ============================================================ -->
+<svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M6 4l14 8-14 8V4z" fill="currentColor"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><path d="M7 4h4v16H7zM13 4h4v16h-4z" fill="currentColor"/></symbol>
+  <symbol id="i-resume" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M10 8.2l6 3.8-6 3.8V8.2z" fill="currentColor"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path d="M3.2 15.4h17.6M5.4 15.4l1.5-5.1A2 2 0 0 1 8.8 8.8h6.4a2 2 0 0 1 1.9 1.5l1.5 5.1M4 15.4v2.4h2.6M20 15.4v2.4h-2.6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7.4" cy="17.9" r="1.7" fill="currentColor"/><circle cx="16.6" cy="17.9" r="1.7" fill="currentColor"/></symbol>
+  <symbol id="i-clipboard" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="1.8" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M9 3h6v3H9z" fill="currentColor"/><path d="M8.4 11h7.2M8.4 14.2h7.2M8.4 17.4h4.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+  <symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.4" fill="currentColor"/><path d="M7.7 12.4l2.9 2.9 5.7-6" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.8l4.2 4.2L19 6.6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-cross" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  <symbol id="i-timer" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 8.6V13l3.1 2M9.2 2.8h5.6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M3.6 17.2a9.4 9.4 0 1 1 16.8 0" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/><path d="M12 16.2l4.4-4.9" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/><circle cx="12" cy="17" r="1.9" fill="currentColor"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 19.4h16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><rect x="5.4" y="12" width="3" height="5.6" fill="currentColor"/><rect x="10.5" y="8.4" width="3" height="9.2" fill="currentColor"/><rect x="15.6" y="4.8" width="3" height="12.8" fill="currentColor"/></symbol>
+  <symbol id="i-trend" viewBox="0 0 24 24"><path d="M3.4 16.6l5.2-5.4 3.4 3 7.4-7.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.6 6.4h5.2v5.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-file-pdf" viewBox="0 0 24 24"><path d="M6 2.8h7.6L19 8.2v13H6z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M13.4 2.8v5.6H19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M8.6 17.6v-5h1.7a1.5 1.5 0 0 1 0 3H8.6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><path d="M8.4 6.4h11M8.4 12h11M8.4 17.6h11" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/><circle cx="4.8" cy="6.4" r="1.5" fill="currentColor"/><circle cx="4.8" cy="12" r="1.5" fill="currentColor"/><circle cx="4.8" cy="17.6" r="1.5" fill="currentColor"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3.6" y="3.6" width="7" height="7" rx="1.2" fill="currentColor"/><rect x="13.4" y="3.6" width="7" height="7" rx="1.2" fill="currentColor"/><rect x="3.6" y="13.4" width="7" height="7" rx="1.2" fill="currentColor"/><rect x="13.4" y="13.4" width="7" height="7" rx="1.2" fill="currentColor"/></symbol>
+  <symbol id="i-torque-sheet" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="1.8" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M7.6 8h8.8M7.6 12h8.8M7.6 16h5.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+  <symbol id="i-cube" viewBox="0 0 24 24"><path d="M12 2.8l8.4 4.6v9.2L12 21.2 3.6 16.6V7.4z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M3.6 7.4L12 12l8.4-4.6M12 12v9.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+  <symbol id="i-video" viewBox="0 0 24 24"><rect x="2.8" y="6" width="13" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16.4 11l4.8-3v8l-4.8-3z" fill="currentColor"/></symbol>
+  <symbol id="i-zoom-in" viewBox="0 0 24 24"><circle cx="10.6" cy="10.6" r="6.4" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M15.4 15.4l4.6 4.6M8.2 10.6h4.8M10.6 8.2v4.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
+  <symbol id="i-zoom-out" viewBox="0 0 24 24"><path d="M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  <symbol id="i-expand" viewBox="0 0 24 24"><path d="M4 9V4h5M20 15v5h-5M20 9V4h-5M4 15v5h5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-warning" viewBox="0 0 24 24"><path d="M12 3.2l9.2 16H2.8z" fill="currentColor"/><path d="M12 8.6v5.2M12 16.6v.9" stroke="#fff" stroke-width="1.9" stroke-linecap="round"/></symbol>
+  <symbol id="i-tool" viewBox="0 0 24 24"><path d="M4 8.4h9.2v6H4z" fill="currentColor"/><path d="M13.2 9.8h4.2l2.6-3v11l-2.6-3h-4.2" fill="currentColor"/><path d="M6.6 14.4v5h3.4v-5" fill="currentColor"/></symbol>
+  <symbol id="i-scan" viewBox="0 0 24 24"><path d="M3.4 7.4V4.6a1.2 1.2 0 0 1 1.2-1.2h2.8M20.6 7.4V4.6a1.2 1.2 0 0 0-1.2-1.2h-2.8M3.4 16.6v2.8a1.2 1.2 0 0 0 1.2 1.2h2.8M20.6 16.6v2.8a1.2 1.2 0 0 1-1.2 1.2h-2.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M7 8v8M9.6 8v8M12 8v8M14.6 8v8M17 8v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M3.4 8.2h3.2l1.4-2h6l1.4 2h3.2a1.4 1.4 0 0 1 1.4 1.4v8a1.4 1.4 0 0 1-1.4 1.4H3.4A1.4 1.4 0 0 1 2 17.6v-8a1.4 1.4 0 0 1 1.4-1.4z" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.4" r="3.4" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-conveyor" viewBox="0 0 24 24"><rect x="7" y="5.4" width="10" height="6" rx="1" fill="currentColor"/><path d="M2.6 16.4h18.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="5.6" cy="19" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="19" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="18.4" cy="19" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-lift" viewBox="0 0 24 24"><path d="M3.4 20.4h17.2M6 20.4V9.6M18 20.4V9.6M6 9.6h12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M8.6 6.4h6.8v3H8.6z" fill="currentColor"/><path d="M12 6.4V2.6M9.2 4.6L12 2.6l2.8 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-chip" viewBox="0 0 24 24"><rect x="6.4" y="6.4" width="11.2" height="11.2" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="9.8" y="9.8" width="4.4" height="4.4" fill="currentColor"/><path d="M9.4 6.4V3.4M12 6.4V3.4M14.6 6.4V3.4M9.4 20.6v-3M12 20.6v-3M14.6 20.6v-3M6.4 9.4h-3M6.4 12h-3M6.4 14.6h-3M20.6 9.4h-3M20.6 12h-3M20.6 14.6h-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8.2" r="3.9" fill="currentColor"/><path d="M4.6 20.4c0-4 3.3-6.4 7.4-6.4s7.4 2.4 7.4 6.4" fill="currentColor"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2.6l7.6 2.8v6.2c0 4.6-3.1 8.2-7.6 9.8-4.5-1.6-7.6-5.2-7.6-9.8V5.4z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8.4 11.8l2.6 2.6 4.6-4.8" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M15.6 2.8a5.6 5.6 0 0 0-4.9 8.3L3.4 18.4l2.2 2.2 7.3-7.3a5.6 5.6 0 0 0 7.5-6.6l-2.9 2.9-2.6-.7-.7-2.6 2.9-2.9a5.6 5.6 0 0 0-1.5-.6z" fill="currentColor"/></symbol>
+  <symbol id="i-flag" viewBox="0 0 24 24"><path d="M6 21V3.6M6 4.4h11.6l-1.9 4 1.9 4H6" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-network" viewBox="0 0 24 24"><circle cx="12" cy="5.2" r="2.6" fill="currentColor"/><circle cx="5.2" cy="18.4" r="2.6" fill="currentColor"/><circle cx="18.8" cy="18.4" r="2.6" fill="currentColor"/><path d="M12 7.8v4.4M12 12.2H5.2v3.6M12 12.2h6.8v3.6" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7.6" ry="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4.4 6v12c0 1.7 3.4 3 7.6 3s7.6-1.3 7.6-3V6M4.4 12c0 1.7 3.4 3 7.6 3s7.6-1.3 7.6-3" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-printer" viewBox="0 0 24 24"><path d="M7 8.6V3.4h10v5.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><rect x="3.4" y="8.6" width="17.2" height="7.4" rx="1.6" fill="currentColor"/><path d="M7 14h10v6.6H7z" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-historian" viewBox="0 0 24 24"><path d="M3.6 20h16.8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M4.4 16.4l4-5 3.4 2.6 3.2-5.4 4.6 4.2" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8.4" cy="11.4" r="1.5" fill="currentColor"/><circle cx="15" cy="8.6" r="1.5" fill="currentColor"/></symbol>
+  <symbol id="i-plc" viewBox="0 0 24 24"><rect x="3.4" y="5.4" width="17.2" height="13.2" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M6.6 8.6h4v7h-4zM12.6 8.6h1.8v7h-1.8zM16 8.6h1.8v7H16z" fill="currentColor"/></symbol>
+  <symbol id="i-suspension" viewBox="0 0 24 24"><path d="M12 2.6v3.2M9 6.2h6M10 6.2c-1.7 1.4-1.7 2.4 0 3.6s1.7 2.2 0 3.6 -1.7 2.4 0 3.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M14 6.2c1.7 1.4 1.7 2.4 0 3.6s-1.7 2.2 0 3.6 1.7 2.4 0 3.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M9 17.4h6M12 17.4v3.4M4.4 20.8h15.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.6" y="5" width="16.8" height="15.4" rx="1.8" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3.6 9.8h16.8M8.2 3.2v3.6M15.8 3.2v3.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-search-doc" viewBox="0 0 24 24"><path d="M5.4 3.4h9L19 8v12.6H5.4z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="11.4" cy="12.4" r="3" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M13.6 14.6l2.4 2.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-bug" viewBox="0 0 24 24"><circle cx="12" cy="13" r="5" fill="currentColor"/><path d="M12 8V4.6M7.6 9.4L5.2 7M16.4 9.4L18.8 7M4.4 13H2M22 13h-2.4M6.6 18l-2 2.2M17.4 18l2 2.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-genealogy" viewBox="0 0 24 24"><rect x="8.6" y="2.8" width="7" height="4.4" rx="1" fill="currentColor"/><rect x="2.6" y="16.8" width="7" height="4.4" rx="1" fill="currentColor"/><rect x="14.6" y="16.8" width="7" height="4.4" rx="1" fill="currentColor"/><path d="M12 7.4v4.4M6.1 16.6v-4.8h11.8v4.8" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-sap" viewBox="0 0 24 24"><path d="M2.4 6.6h19.2L18 17.4H2.4z" fill="currentColor"/></symbol>
+  <symbol id="i-apriso" viewBox="0 0 24 24"><path d="M12 2.6l9.4 5.4v8L12 21.4 2.6 16V8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="12" r="3.2" fill="currentColor"/></symbol>
+  <symbol id="i-opc" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" fill="currentColor"/><path d="M12 3v4.4M12 16.6V21M3 12h4.4M16.6 12H21M5.6 5.6l3.1 3.1M15.3 15.3l3.1 3.1M18.4 5.6l-3.1 3.1M8.7 15.3l-3.1 3.1" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13.4 2.4L4.6 13.8h5.2L9 21.6l9-11.8h-5.4z" fill="currentColor"/></symbol>
+</svg>
+
+<div class="app">
+
+  <!-- ============================================================
+       1. TOP HEADER BAR
+       ============================================================ -->
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">
+        <svg viewBox="0 0 40 40" class="brand-logo" aria-hidden="true">
+          <path d="M4 6h18c8 0 14 6 14 14s-6 14-14 14H4z" fill="#0e9de0"/>
+          <path d="M11 12h9c4.4 0 8 3.6 8 8s-3.6 8-8 8h-9z" fill="#0b2540"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <strong>DELMIA</strong>
+        <em>Apriso MES</em>
+      </span>
+    </div>
+
+    <div class="topbar-divider"></div>
+
+    <div class="station-title">
+      <span class="station-icon"><svg class="ic"><use href="#i-suspension"></use></svg></span>
+      <span class="station-title-text">
+        <strong>STATION 02 &ndash; FRONT SUSPENSION ASSEMBLY</strong>
+        <span class="station-sub"><svg class="ic ic-xs"><use href="#i-clipboard"></use></svg> Install Lower Arm, Strut, Knuckle, Stabilizer</span>
+      </span>
+    </div>
+
+    <div class="topbar-divider"></div>
+
+    <div class="topbar-fields">
+      <div class="tb-field">
+        <span class="tb-label">Production Order</span>
+        <span class="tb-value">PO-24-0009876</span>
+      </div>
+      <div class="tb-field">
+        <span class="tb-label">VIN</span>
+        <span class="tb-value vin">MA1AB2SU0R64012345</span>
+      </div>
+      <div class="tb-field">
+        <span class="tb-label">Model / Variant</span>
+        <span class="tb-value">SUV-X / XZA 2.0 AT</span>
+      </div>
+      <div class="tb-field">
+        <span class="tb-label">Sequence No.</span>
+        <span class="tb-value">00025</span>
+      </div>
+      <div class="tb-field">
+        <span class="tb-label">Shift</span>
+        <span class="tb-value">A</span>
+      </div>
+      <div class="tb-field tb-operator">
+        <span class="tb-op-icon"><svg class="ic"><use href="#i-user"></use></svg></span>
+        <span class="tb-op-text">
+          <span class="tb-label">Operator</span>
+          <span class="tb-value">RAMESH K</span>
+          <span class="tb-meta">OP10345 | Level 2</span>
+        </span>
+      </div>
+      <div class="tb-field tb-clock">
+        <span class="tb-value">31-May-2025</span>
+        <span class="tb-meta">10:24:35 AM</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       2. STATUS STRIP
+       ============================================================ -->
+  <section class="statusbar">
+    <div class="st-card">
+      <div class="st-text">
+        <span class="st-label">STATION STATUS</span>
+        <span class="st-value green">RUNNING</span>
+      </div>
+      <span class="st-icon green"><svg class="ic"><use href="#i-play"></use></svg></span>
+    </div>
+
+    <div class="st-card">
+      <span class="st-icon blue"><svg class="ic"><use href="#i-car"></use></svg></span>
+      <div class="st-text">
+        <span class="st-label">VEHICLE STATUS</span>
+        <span class="st-value navy">AT STATION</span>
+      </div>
+    </div>
+
+    <div class="st-card">
+      <span class="st-icon blue"><svg class="ic"><use href="#i-clipboard"></use></svg></span>
+      <div class="st-text">
+        <span class="st-label">ORDER STATUS</span>
+        <span class="st-value navy">RELEASED</span>
+      </div>
+    </div>
+
+    <div class="st-card">
+      <span class="st-icon green"><svg class="ic"><use href="#i-check-circle"></use></svg></span>
+      <div class="st-text">
+        <span class="st-label">VARIANT VALIDATION</span>
+        <span class="st-value green">MATCHED</span>
+      </div>
+    </div>
+
+    <div class="st-card st-metric">
+      <div class="st-text">
+        <span class="st-label">TARGET CYCLE TIME</span>
+        <span class="st-value navy">180 sec</span>
+      </div>
+    </div>
+
+    <div class="st-card st-metric">
+      <div class="st-text">
+        <span class="st-label">ACTUAL CYCLE TIME</span>
+        <span class="st-value green">132 sec</span>
+      </div>
+    </div>
+
+    <div class="st-card">
+      <div class="st-text">
+        <span class="st-label">OEE</span>
+        <span class="st-value green">86.4 %</span>
+      </div>
+      <span class="st-icon blue"><svg class="ic"><use href="#i-trend"></use></svg></span>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       3. MAIN WORKSPACE
+       ============================================================ -->
+  <main class="workspace">
+
+    <!-- ---------------- LEFT COLUMN ---------------- -->
+    <div class="col col-left">
+
+      <!-- VEHICLE & ORDER INFORMATION -->
+      <section class="panel">
+        <h2 class="panel-head">VEHICLE &amp; ORDER INFORMATION</h2>
+        <div class="panel-body">
+          <dl class="kv">
+            <div class="kv-row"><dt>VIN</dt><dd class="mono">MA1AB2SU0R64012345</dd></div>
+            <div class="kv-row"><dt>Model</dt><dd>SUV-X</dd></div>
+            <div class="kv-row"><dt>Variant</dt><dd>XZA 2.0 AT</dd></div>
+            <div class="kv-row"><dt>Color</dt><dd>Pearl White</dd></div>
+            <div class="kv-row"><dt>Production Order</dt><dd>PO-24-0009876</dd></div>
+            <div class="kv-row"><dt>Sequence No.</dt><dd>00025</dd></div>
+            <div class="kv-row"><dt>Routing</dt><dd>GA-FS-02</dd></div>
+            <div class="kv-row"><dt>BOM Version</dt><dd>BOM-1.3</dd></div>
+            <div class="kv-row"><dt>Release Date</dt><dd>31-May-2025</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- COMPONENT VERIFICATION -->
+      <section class="panel">
+        <h2 class="panel-head">COMPONENT VERIFICATION</h2>
+        <div class="panel-body pad-0">
+          <table class="grid-table">
+            <thead>
+              <tr>
+                <th>Component</th>
+                <th class="c">Side</th>
+                <th>Part Number</th>
+                <th>Serial/Batch No.</th>
+                <th class="c">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Lower Control Arm</td><td class="c">LH</td>
+                <td class="mono">FS-LCA-LH-001</td><td class="mono">LCA-LH-250531-001</td>
+                <td class="c"><span class="tick"><svg class="ic ic-xs"><use href="#i-check"></use></svg></span></td>
+              </tr>
+              <tr>
+                <td>Lower Control Arm</td><td class="c">RH</td>
+                <td class="mono">FS-LCA-RH-001</td><td class="mono">LCA-RH-250531-001</td>
+                <td class="c"><span class="tick"><svg class="ic ic-xs"><use href="#i-check"></use></svg></span></td>
+              </tr>
+              <tr>
+                <td>Strut Assembly</td><td class="c">LH</td>
+                <td class="mono">FS-STRUT-LH-001</td><td class="mono">STRUT-LH-250531-001</td>
+                <td class="c"><span class="tick"><svg class="ic ic-xs"><use href="#i-check"></use></svg></span></td>
+              </tr>
+              <tr>
+                <td>Strut Assembly</td><td class="c">RH</td>
+                <td class="mono">FS-STRUT-RH-001</td><td class="mono">STRUT-RH-250531-001</td>
+                <td class="c"><span class="tick"><svg class="ic ic-xs"><use href="#i-check"></use></svg></span></td>
+              </tr>
+              <tr>
+                <td>Steering Knuckle</td><td class="c">LH</td>
+                <td class="mono">FS-KNUCKLE-LH-001</td><td class="mono">KNU-LH-250531-001</td>
+                <td class="c"><span class="tick"><svg class="ic ic-xs"><use href="#i-check"></use></svg></span></td>
+              </tr>
+              <tr>
+                <td>Steering Knuckle</td><td class="c">RH</td>
+                <td class="mono">FS-KNUCKLE-RH-001</td><td class="mono">KNU-RH-250531-001</td>
+                <td class="c"><span class="tick"><svg class="ic ic-xs"><use href="#i-check"></use></svg></span></td>
+              </tr>
+              <tr>
+                <td>Stabilizer Bar</td><td class="c">&ndash;</td>
+                <td class="mono">FS-STAB-BAR-001</td><td class="mono">STAB-250531-001</td>
+                <td class="c"><span class="tick"><svg class="ic ic-xs"><use href="#i-check"></use></svg></span></td>
+              </tr>
+              <tr>
+                <td>Stabilizer Link</td><td class="c">LH</td>
+                <td class="mono">FS-STAB-LINK-LH-001</td><td class="mono">SL-LH-250531-001</td>
+                <td class="c"><span class="tick"><svg class="ic ic-xs"><use href="#i-check"></use></svg></span></td>
+              </tr>
+              <tr>
+                <td>Stabilizer Link</td><td class="c">RH</td>
+                <td class="mono">FS-STAB-LINK-RH-001</td><td class="mono">SL-RH-250531-001</td>
+                <td class="c"><span class="tick"><svg class="ic ic-xs"><use href="#i-check"></use></svg></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- QUALITY CHECKLIST -->
+      <section class="panel">
+        <h2 class="panel-head">QUALITY CHECKLIST</h2>
+        <div class="panel-body pad-0">
+          <table class="grid-table checklist">
+            <thead>
+              <tr><th>Check Point</th><th class="c">Result</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Lower Arm Installation</td><td class="c pass">Pass</td></tr>
+              <tr><td>Strut Assembly</td><td class="c pass">Pass</td></tr>
+              <tr><td>Knuckle Installation</td><td class="c pass">Pass</td></tr>
+              <tr><td>Stabilizer Assembly</td><td class="c pass">Pass</td></tr>
+              <tr><td>All Torque Points Completed</td><td class="c pass">Pass</td></tr>
+              <tr><td>Overall Visual Inspection</td><td class="c pass">Pass</td></tr>
+            </tbody>
+          </table>
+          <div class="btn-row pad">
+            <button type="button" class="btn btn-blue"><svg class="ic ic-xs"><use href="#i-search-doc"></use></svg> VIEW INSPECTION</button>
+            <button type="button" class="btn btn-red"><svg class="ic ic-xs"><use href="#i-bug"></use></svg> DEFECT LOG</button>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /col-left -->
+
+    <!-- ---------------- CENTER COLUMN ---------------- -->
+    <div class="col col-center">
+
+      <!-- DIGITAL WORK INSTRUCTION -->
+      <section class="panel">
+        <h2 class="panel-head">DIGITAL WORK INSTRUCTION</h2>
+        <div class="panel-body">
+
+          <input type="radio" name="wi-step" id="wi-s1" class="wi-radio" checked />
+          <input type="radio" name="wi-step" id="wi-s2" class="wi-radio" />
+          <input type="radio" name="wi-step" id="wi-s3" class="wi-radio" />
+          <input type="radio" name="wi-step" id="wi-s4" class="wi-radio" />
+          <input type="radio" name="wi-step" id="wi-s5" class="wi-radio" />
+
+          <div class="wi-tabs">
+            <label class="wi-tab" for="wi-s1">STEP 1</label>
+            <label class="wi-tab" for="wi-s2">STEP 2</label>
+            <label class="wi-tab" for="wi-s3">STEP 3</label>
+            <label class="wi-tab" for="wi-s4">STEP 4</label>
+            <label class="wi-tab" for="wi-s5">STEP 5</label>
+            <button type="button" class="wi-tab-icon" title="All steps"><svg class="ic ic-xs"><use href="#i-list"></use></svg></button>
+          </div>
+
+          <div class="wi-body">
+
+            <!-- Illustration -->
+            <div class="wi-visual">
+              <div class="wi-figure">
+                <svg viewBox="0 0 460 300" class="susp-svg" role="img" aria-label="Front suspension assembly exploded view">
+                  <defs>
+                    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0%" stop-color="#c3ccd6"/><stop offset="45%" stop-color="#f2f5f8"/><stop offset="100%" stop-color="#a9b4c0"/>
+                    </linearGradient>
+                    <linearGradient id="metalDark" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0%" stop-color="#7b8794"/><stop offset="45%" stop-color="#c9d2dc"/><stop offset="100%" stop-color="#6c7783"/>
+                    </linearGradient>
+                    <linearGradient id="spring" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0%" stop-color="#4b5966"/><stop offset="50%" stop-color="#94a3b1"/><stop offset="100%" stop-color="#3f4b57"/>
+                    </linearGradient>
+                  </defs>
+
+                  <!-- ground shadow -->
+                  <ellipse cx="250" cy="272" rx="150" ry="12" fill="#0f172a" opacity="0.06"/>
+
+                  <!-- subframe rail -->
+                  <path d="M60 214 L300 214 L322 232 L86 232 Z" fill="url(#metalDark)" stroke="#5b6672" stroke-width="1.4"/>
+                  <path d="M300 214 L360 200 L372 216 L322 232 Z" fill="#8b96a2" stroke="#5b6672" stroke-width="1.2"/>
+
+                  <!-- stabilizer bar -->
+                  <path d="M92 196 C120 176 168 176 196 196 L272 196 C298 196 312 182 318 168"
+                        fill="none" stroke="#e4a33c" stroke-width="9" stroke-linecap="round"/>
+                  <path d="M92 196 C120 176 168 176 196 196 L272 196 C298 196 312 182 318 168"
+                        fill="none" stroke="#f6c56b" stroke-width="3" stroke-linecap="round"/>
+                  <rect x="150" y="188" width="16" height="16" rx="3" fill="#4b5561"/>
+                  <rect x="232" y="188" width="16" height="16" rx="3" fill="#4b5561"/>
+
+                  <!-- lower control arm -->
+                  <path d="M104 232 L188 210 L268 226 L262 244 L186 232 L112 250 Z"
+                        fill="url(#metal)" stroke="#59636f" stroke-width="1.6"/>
+                  <circle cx="112" cy="241" r="8" fill="#6b7683" stroke="#3f4a55" stroke-width="1.4"/>
+                  <circle cx="264" cy="235" r="8" fill="#6b7683" stroke="#3f4a55" stroke-width="1.4"/>
+                  <circle cx="188" cy="219" r="6.4" fill="#8a949f" stroke="#3f4a55" stroke-width="1.2"/>
+
+                  <!-- knuckle -->
+                  <path d="M300 150 L330 142 L348 166 L346 206 L322 226 L296 214 L292 178 Z"
+                        fill="url(#metalDark)" stroke="#4f5a66" stroke-width="1.6"/>
+                  <circle cx="320" cy="182" r="15" fill="#59646f" stroke="#39434e" stroke-width="1.6"/>
+                  <circle cx="320" cy="182" r="7" fill="#2f3945"/>
+                  <circle cx="303" cy="156" r="4.6" fill="#8d98a4" stroke="#3d4753" stroke-width="1.1"/>
+                  <circle cx="340" cy="200" r="4.6" fill="#8d98a4" stroke="#3d4753" stroke-width="1.1"/>
+
+                  <!-- strut: bottom fork -->
+                  <path d="M292 118 h34 v44 h-12 v-24 h-10 v24 h-12 z" fill="#5d6874" stroke="#3f4a55" stroke-width="1.3"/>
+                  <!-- coil spring -->
+                  <g stroke="url(#spring)" stroke-width="9" fill="none" stroke-linecap="round">
+                    <path d="M286 112 C296 100 328 100 336 112"/>
+                    <path d="M286 98 C296 86 328 86 336 98"/>
+                    <path d="M286 84 C296 72 328 72 336 84"/>
+                    <path d="M286 70 C296 58 328 58 336 70"/>
+                    <path d="M286 56 C296 44 328 44 336 56"/>
+                  </g>
+                  <!-- shock rod + top mount -->
+                  <rect x="306" y="30" width="10" height="34" rx="3" fill="#98a3af" stroke="#5b6672" stroke-width="1.1"/>
+                  <path d="M288 24 h46 l-6 14 h-34 z" fill="#3f4a55"/>
+                  <circle cx="292" cy="22" r="4" fill="#6f7a86"/>
+                  <circle cx="330" cy="22" r="4" fill="#6f7a86"/>
+                  <rect x="284" y="14" width="54" height="10" rx="4" fill="#525d69" stroke="#3a444f" stroke-width="1.1"/>
+
+                  <!-- stabilizer link -->
+                  <path d="M318 168 l6 -34" stroke="#e4a33c" stroke-width="6" stroke-linecap="round"/>
+                  <circle cx="324" cy="134" r="5" fill="#c98b28"/>
+
+                  <!-- brake disc hint -->
+                  <circle cx="384" cy="184" r="30" fill="none" stroke="#b9c3ce" stroke-width="7"/>
+                  <circle cx="384" cy="184" r="14" fill="#dfe5eb" stroke="#9aa5b1" stroke-width="2"/>
+
+                  <!-- callout leader lines -->
+                  <g stroke="#e8a33d" stroke-width="1.6" fill="none">
+                    <path d="M118 96 L232 84"/><circle cx="234" cy="83.5" r="3" fill="#e8a33d" stroke="none"/>
+                    <path d="M118 137 L296 158"/><circle cx="298" cy="158.5" r="3" fill="#e8a33d" stroke="none"/>
+                    <path d="M118 178 L206 191"/><circle cx="208" cy="191.5" r="3" fill="#e8a33d" stroke="none"/>
+                    <path d="M118 219 L182 224"/><circle cx="184" cy="224.5" r="3" fill="#e8a33d" stroke="none"/>
+                  </g>
+                </svg>
+
+                <span class="callout" style="top:26%;left:4%">Strut Assembly</span>
+                <span class="callout" style="top:40%;left:4%">Steering Knuckle</span>
+                <span class="callout" style="top:54%;left:4%">Stabilizer Bar</span>
+                <span class="callout" style="top:68%;left:4%">Lower Control Arm</span>
+              </div>
+
+              <div class="wi-zoom">
+                <button type="button" class="zoom-btn" title="Zoom in"><svg class="ic ic-xs"><use href="#i-zoom-in"></use></svg></button>
+                <button type="button" class="zoom-btn" title="Zoom out"><svg class="ic ic-xs"><use href="#i-zoom-out"></use></svg></button>
+                <button type="button" class="zoom-btn" title="Fit to screen"><svg class="ic ic-xs"><use href="#i-expand"></use></svg></button>
+              </div>
+            </div>
+
+            <!-- Instruction text -->
+            <div class="wi-steps">
+
+              <article class="wi-step-panel s1">
+                <h3 class="wi-step-title">Step 1 : Install Lower Control Arm</h3>
+                <ol class="wi-list">
+                  <li>Scan Lower Control Arm (LH and RH).</li>
+                  <li>Position lower control arm on the subframe.</li>
+                  <li>Tighten front and rear bolts as per sequence.</li>
+                  <li>Ensure all bolts are tightened to target torque.</li>
+                </ol>
+              </article>
+
+              <article class="wi-step-panel s2">
+                <h3 class="wi-step-title">Step 2 : Install Strut Assembly</h3>
+                <ol class="wi-list">
+                  <li>Scan Strut Assembly (LH and RH).</li>
+                  <li>Align strut top mount with body shell holes.</li>
+                  <li>Hand-start all three top nuts before torquing.</li>
+                  <li>Torque top nuts to 65 Nm in a criss-cross pattern.</li>
+                </ol>
+              </article>
+
+              <article class="wi-step-panel s3">
+                <h3 class="wi-step-title">Step 3 : Install Steering Knuckle</h3>
+                <ol class="wi-list">
+                  <li>Scan Steering Knuckle (LH and RH).</li>
+                  <li>Seat knuckle into strut bottom fork.</li>
+                  <li>Insert bottom bolts and torque to 120 Nm.</li>
+                  <li>Connect ball joint and secure the cotter pin.</li>
+                </ol>
+              </article>
+
+              <article class="wi-step-panel s4">
+                <h3 class="wi-step-title">Step 4 : Install Stabilizer Bar &amp; Links</h3>
+                <ol class="wi-list">
+                  <li>Scan Stabilizer Bar and both Stabilizer Links.</li>
+                  <li>Mount bar with bushes and clamp brackets.</li>
+                  <li>Fit links between bar ends and strut brackets.</li>
+                  <li>Torque link nuts to 45 Nm; verify free movement.</li>
+                </ol>
+              </article>
+
+              <article class="wi-step-panel s5">
+                <h3 class="wi-step-title">Step 5 : Final Torque &amp; Inspection</h3>
+                <ol class="wi-list">
+                  <li>Verify all 8 torque points show OK status.</li>
+                  <li>Apply torque paint mark on each fastener.</li>
+                  <li>Perform visual check for clearance and routing.</li>
+                  <li>Confirm quality checklist and complete station.</li>
+                </ol>
+              </article>
+
+              <div class="safety">
+                <div class="safety-head"><svg class="ic ic-xs"><use href="#i-warning"></use></svg> SAFETY INSTRUCTIONS</div>
+                <ul class="safety-list">
+                  <li>Ensure vehicle is in safe position.</li>
+                  <li>Do not place hands under suspension.</li>
+                  <li>Wear safety gloves and shoes.</li>
+                  <li>Follow ergonomic lifting procedure.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="wi-actions">
+            <button type="button" class="btn btn-outline red"><svg class="ic ic-xs"><use href="#i-file-pdf"></use></svg> PDF / SOP</button>
+            <button type="button" class="btn btn-outline blue"><svg class="ic ic-xs"><use href="#i-list"></use></svg> PART LIST</button>
+            <button type="button" class="btn btn-outline amber"><svg class="ic ic-xs"><use href="#i-torque-sheet"></use></svg> TORQUE SHEET</button>
+            <button type="button" class="btn btn-outline violet"><svg class="ic ic-xs"><use href="#i-cube"></use></svg> 3D VIEW</button>
+            <button type="button" class="btn btn-outline green"><svg class="ic ic-xs"><use href="#i-video"></use></svg> VIDEO</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- VARIANT & BOM VALIDATION + GENEALOGY -->
+      <div class="col-split">
+
+        <section class="panel">
+          <h2 class="panel-head">VARIANT &amp; BOM VALIDATION</h2>
+          <div class="panel-body pad-0">
+            <div class="bom-summary">
+              <div class="bom-chip"><span class="bom-chip-label">Model</span><span class="bom-chip-value">SUV-X</span></div>
+              <div class="bom-chip"><span class="bom-chip-label">Variant</span><span class="bom-chip-value">XZA 2.0 AT</span></div>
+              <div class="bom-chip"><span class="bom-chip-label">BOM Matched</span>
+                <span class="badge badge-green">MATCHED <svg class="ic ic-xs"><use href="#i-check"></use></svg></span>
+              </div>
+            </div>
+            <table class="grid-table">
+              <thead>
+                <tr><th>Component</th><th>Required Part Number</th><th>Scanned Part Number</th><th class="c">Match Status</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Lower Control Arm LH</td><td class="mono">FS-LCA-LH-001</td><td class="mono">FS-LCA-LH-001</td><td class="c"><span class="tick"><svg class="ic ic-xs"><use href="#i-check"></use></svg></span></td></tr>
+                <tr><td>Lower Control Arm RH</td><td class="mono">FS-LCA-RH-001</td><td class="mono">FS-LCA-RH-001</td><td class="c"><span class="tick"><svg class="ic ic-xs"><use href="#i-check"></use></svg></span></td></tr>
+                <tr><td>Strut Assembly LH</td><td class="mono">FS-STRUT-LH-001</td><td class="mono">FS-STRUT-LH-001</td><td class="c"><span class="tick"><svg class="ic ic-xs"><use href="#i-check"></use></svg></span></td></tr>
+                <tr><td>Strut Assembly RH</td><td class="mono">FS-STRUT-RH-001</td><td class="mono">FS-STRUT-RH-001</td><td class="c"><span class="tick"><svg class="ic ic-xs"><use href="#i-check"></use></svg></span></td></tr>
+                <tr><td>Steering Knuckle LH</td><td class="mono">FS-KNUCKLE-LH-001</td><td class="mono">FS-KNUCKLE-LH-001</td><td class="c"><span class="tick"><svg class="ic ic-xs"><use href="#i-check"></use></svg></span></td></tr>
+              </tbody>
+            </table>
+            <div class="legend">
+              <span class="lg"><i class="dot green"></i> Match</span>
+              <span class="lg"><i class="dot red"></i> Mismatch</span>
+              <span class="lg"><i class="dot grey"></i> Not Scanned</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2 class="panel-head">GENEALOGY (VIN TRACEABILITY)</h2>
+          <div class="panel-body pad-0">
+            <div class="gen-meta">
+              <div class="gen-row"><span>VIN</span><b class="mono">MA1AB2SU0R64012345</b></div>
+              <div class="gen-row"><span>Station</span><b>02 &ndash; Front Suspension</b></div>
+              <div class="gen-row"><span>Operator</span><b>RAMESH K (OP10345)</b></div>
+              <div class="gen-row"><span>Start Time</span><b>31-May-2025 10:19:22 AM</b></div>
+              <div class="gen-row"><span>End Time</span><b>31-May-2025 10:24:35 AM</b></div>
+            </div>
+            <table class="grid-table">
+              <thead>
+                <tr><th>Component</th><th>Serial / Batch No.</th><th class="c">Install Time</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>LCA LH</td><td class="mono">LCA-LH-250531-001</td><td class="c mono">10:19:01 AM</td></tr>
+                <tr><td>LCA RH</td><td class="mono">LCA-RH-250531-001</td><td class="c mono">10:19:46 AM</td></tr>
+                <tr><td>Strut LH</td><td class="mono">STRUT-LH-250531-001</td><td class="c mono">10:20:31 AM</td></tr>
+                <tr><td>Strut RH</td><td class="mono">STRUT-RH-250531-001</td><td class="c mono">10:21:12 AM</td></tr>
+                <tr><td>Knuckle LH</td><td class="mono">KNU-LH-250531-001</td><td class="c mono">10:21:52 AM</td></tr>
+              </tbody>
+            </table>
+            <div class="btn-row pad center">
+              <button type="button" class="btn btn-blue wide"><svg class="ic ic-xs"><use href="#i-genealogy"></use></svg> VIEW FULL GENEALOGY</button>
+            </div>
+          </div>
+        </section>
+
+      </div><!-- /col-split -->
+    </div><!-- /col-center -->
+
+    <!-- ---------------- RIGHT COLUMN ---------------- -->
+    <div class="col col-right">
+
+      <!-- TORQUE MANAGEMENT -->
+      <section class="panel">
+        <h2 class="panel-head">TORQUE MANAGEMENT</h2>
+        <div class="panel-body pad-0">
+
+          <div class="tq-top">
+            <div class="tq-top-cell">
+              <span class="tq-label">Tool Status</span>
+              <span class="tq-value green">CONNECTED</span>
+            </div>
+            <div class="tq-top-cell">
+              <span class="tq-label">Tool ID</span>
+              <span class="tq-value">ST-DCN-10-02</span>
+            </div>
+            <div class="tq-top-cell">
+              <span class="tq-label">Calibration Due</span>
+              <span class="tq-value">15-Jun-2025</span>
+            </div>
+            <span class="tq-ok"><svg class="ic ic-xs"><use href="#i-check-circle"></use></svg></span>
+          </div>
+
+          <div class="tq-diagram">
+            <span class="tq-diagram-title">Torque Sequence</span>
+            <svg viewBox="0 0 400 124" class="tq-svg" role="img" aria-label="Torque sequence positions">
+              <!-- subframe / hub schematic -->
+              <path d="M56 78 L150 78 L176 58 L226 58 L252 78 L346 78" fill="none" stroke="#8e9aa6" stroke-width="7" stroke-linecap="round"/>
+              <path d="M98 78 L98 102 L304 102 L304 78" fill="none" stroke="#aab5c0" stroke-width="5" stroke-linecap="round"/>
+              <rect x="168" y="38" width="66" height="22" rx="6" fill="#dbe2e9" stroke="#93a0ac" stroke-width="1.6"/>
+              <path d="M186 38 v-14 M216 38 v-14" stroke="#93a0ac" stroke-width="5" stroke-linecap="round"/>
+              <circle cx="128" cy="78" r="11" fill="none" stroke="#b6c0ca" stroke-width="3"/>
+              <circle cx="274" cy="78" r="11" fill="none" stroke="#b6c0ca" stroke-width="3"/>
+
+              <!-- numbered torque points -->
+              <g class="tq-pt">
+                <circle cx="152" cy="24" r="11"/><text x="152" y="28.6">1</text>
+              </g>
+              <g class="tq-pt">
+                <circle cx="250" cy="24" r="11"/><text x="250" y="28.6">2</text>
+              </g>
+              <g class="tq-pt">
+                <circle cx="326" cy="42" r="11"/><text x="326" y="46.6">3</text>
+              </g>
+              <g class="tq-pt">
+                <circle cx="74" cy="42" r="11"/><text x="74" y="46.6">4</text>
+              </g>
+              <g class="tq-pt">
+                <circle cx="98" cy="102" r="11"/><text x="98" y="106.6">5</text>
+              </g>
+              <g class="tq-pt">
+                <circle cx="304" cy="102" r="11"/><text x="304" y="106.6">6</text>
+              </g>
+              <g class="tq-pt">
+                <circle cx="166" cy="102" r="11"/><text x="166" y="106.6">7</text>
+              </g>
+              <g class="tq-pt">
+                <circle cx="238" cy="102" r="11"/><text x="238" y="106.6">8</text>
+              </g>
+            </svg>
+          </div>
+
+          <table class="grid-table tq-table">
+            <thead>
+              <tr>
+                <th class="c">Step</th><th>Bolt Location</th>
+                <th class="c">Target (Nm)</th><th class="c">Actual (Nm)</th>
+                <th class="c">Status</th><th class="c">Curve</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="c">1</td><td>LCA LH &ndash; Front Bolt</td><td class="c">110</td><td class="c">109.6</td>
+                <td class="c ok">OK</td>
+                <td class="c"><svg viewBox="0 0 40 16" class="spark"><path d="M1 14 C10 14 14 3 21 3 C28 3 32 6 39 6" fill="none" stroke="#18a558" stroke-width="1.6"/></svg></td>
+              </tr>
+              <tr>
+                <td class="c">2</td><td>LCA LH &ndash; Rear Bolt</td><td class="c">110</td><td class="c">110.2</td>
+                <td class="c ok">OK</td>
+                <td class="c"><svg viewBox="0 0 40 16" class="spark"><path d="M1 14 C10 14 14 3 21 3 C28 3 32 6 39 6" fill="none" stroke="#18a558" stroke-width="1.6"/></svg></td>
+              </tr>
+              <tr>
+                <td class="c">3</td><td>LCA RH &ndash; Front Bolt</td><td class="c">110</td><td class="c">109.8</td>
+                <td class="c ok">OK</td>
+                <td class="c"><svg viewBox="0 0 40 16" class="spark"><path d="M1 14 C10 14 14 3 21 3 C28 3 32 6 39 6" fill="none" stroke="#18a558" stroke-width="1.6"/></svg></td>
+              </tr>
+              <tr>
+                <td class="c">4</td><td>LCA RH &ndash; Rear Bolt</td><td class="c">110</td><td class="c">110.1</td>
+                <td class="c ok">OK</td>
+                <td class="c"><svg viewBox="0 0 40 16" class="spark"><path d="M1 14 C10 14 14 3 21 3 C28 3 32 6 39 6" fill="none" stroke="#18a558" stroke-width="1.6"/></svg></td>
+              </tr>
+              <tr>
+                <td class="c">5</td><td>Strut LH &ndash; Top Nut</td><td class="c">65</td><td class="c">64.7</td>
+                <td class="c ok">OK</td>
+                <td class="c"><svg viewBox="0 0 40 16" class="spark"><path d="M1 14 C10 14 14 4 21 4 C28 4 32 7 39 7" fill="none" stroke="#18a558" stroke-width="1.6"/></svg></td>
+              </tr>
+              <tr>
+                <td class="c">6</td><td>Strut RH &ndash; Top Nut</td><td class="c">65</td><td class="c">65.1</td>
+                <td class="c ok">OK</td>
+                <td class="c"><svg viewBox="0 0 40 16" class="spark"><path d="M1 14 C10 14 14 4 21 4 C28 4 32 7 39 7" fill="none" stroke="#18a558" stroke-width="1.6"/></svg></td>
+              </tr>
+              <tr>
+                <td class="c">7</td><td>Strut LH &ndash; Bottom Bolt</td><td class="c">120</td><td class="c">119.5</td>
+                <td class="c ok">OK</td>
+                <td class="c"><svg viewBox="0 0 40 16" class="spark"><path d="M1 14 C10 14 13 2 21 2 C28 2 32 5 39 5" fill="none" stroke="#18a558" stroke-width="1.6"/></svg></td>
+              </tr>
+              <tr>
+                <td class="c">8</td><td>Strut RH &ndash; Bottom Bolt</td><td class="c">120</td><td class="c">120.3</td>
+                <td class="c ok">OK</td>
+                <td class="c"><svg viewBox="0 0 40 16" class="spark"><path d="M1 14 C10 14 13 2 21 2 C28 2 32 5 39 5" fill="none" stroke="#18a558" stroke-width="1.6"/></svg></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="tq-banner">
+            <svg class="ic ic-xs"><use href="#i-check-circle"></use></svg> ALL TORQUE POINTS COMPLETED
+          </div>
+        </div>
+      </section>
+
+      <!-- EQUIPMENT STATUS -->
+      <section class="panel">
+        <h2 class="panel-head">EQUIPMENT STATUS</h2>
+        <div class="panel-body">
+          <div class="eq-grid">
+            <div class="eq-item">
+              <span class="eq-icon"><svg class="ic"><use href="#i-tool"></use></svg></span>
+              <span class="eq-text"><b>Smart Torque Tool</b><i class="green">Connected</i></span>
+            </div>
+            <div class="eq-item">
+              <span class="eq-icon"><svg class="ic"><use href="#i-lift"></use></svg></span>
+              <span class="eq-text"><b>Lift Assist</b><i class="green">Ready</i></span>
+            </div>
+            <div class="eq-item">
+              <span class="eq-icon"><svg class="ic"><use href="#i-scan"></use></svg></span>
+              <span class="eq-text"><b>Barcode Scanner</b><i class="green">Connected</i></span>
+            </div>
+            <div class="eq-item">
+              <span class="eq-icon"><svg class="ic"><use href="#i-conveyor"></use></svg></span>
+              <span class="eq-text"><b>Conveyor</b><i class="green">Running</i></span>
+            </div>
+            <div class="eq-item">
+              <span class="eq-icon"><svg class="ic"><use href="#i-camera"></use></svg></span>
+              <span class="eq-text"><b>Vision Camera</b><i class="green">Connected</i></span>
+            </div>
+            <div class="eq-item">
+              <span class="eq-icon"><svg class="ic"><use href="#i-chip"></use></svg></span>
+              <span class="eq-text"><b>PLC / IO</b><i class="green">Healthy</i></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STATION ACTIONS -->
+      <section class="panel">
+        <h2 class="panel-head">STATION ACTIONS</h2>
+        <div class="panel-body">
+          <div class="act-grid">
+            <button type="button" class="act act-green"><svg class="ic ic-xs"><use href="#i-play"></use></svg> START JOB</button>
+            <button type="button" class="act act-amber"><svg class="ic ic-xs"><use href="#i-pause"></use></svg> HOLD</button>
+            <button type="button" class="act act-blue"><svg class="ic ic-xs"><use href="#i-resume"></use></svg> RESUME</button>
+            <button type="button" class="act act-violet"><svg class="ic ic-xs"><use href="#i-shield"></use></svg> REQUEST QUALITY</button>
+            <button type="button" class="act act-orange"><svg class="ic ic-xs"><use href="#i-wrench"></use></svg> CALL MAINTENANCE</button>
+            <button type="button" class="act act-red"><svg class="ic ic-xs"><use href="#i-flag"></use></svg> COMPLETE STATION</button>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /col-right -->
+  </main>
+
+  <!-- ============================================================
+       4. STATION KPI STRIP
+       ============================================================ -->
+  <section class="kpi-section">
+    <div class="kpi-head-row">
+      <h2 class="panel-head">STATION KPIs</h2>
+    </div>
+    <div class="kpi-tiles">
+      <div class="kpi"><span class="kpi-label">Cycle Time (sec)</span><span class="kpi-value navy">132</span></div>
+      <div class="kpi"><span class="kpi-label">Target (sec)</span><span class="kpi-value navy">180</span></div>
+      <div class="kpi"><span class="kpi-label">Efficiency</span><span class="kpi-value amber">73%</span></div>
+      <div class="kpi"><span class="kpi-label">OEE</span><span class="kpi-value green">86.4%</span></div>
+      <div class="kpi"><span class="kpi-label">FTR</span><span class="kpi-value green">98.7%</span></div>
+      <div class="kpi"><span class="kpi-label">Good Count</span><span class="kpi-value green">325</span></div>
+      <div class="kpi"><span class="kpi-label">Reject Count</span><span class="kpi-value red">4</span></div>
+      <div class="kpi"><span class="kpi-label">Rework Count</span><span class="kpi-value orange">2</span></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       5. FOOTER: SYSTEM INTEGRATION + ANDON
+       ============================================================ -->
+  <footer class="footer">
+    <div class="sys-block">
+      <div class="footer-title">SYSTEM INTEGRATION STATUS</div>
+      <div class="sys-grid">
+        <div class="sys-item"><span class="sys-icon"><svg class="ic"><use href="#i-sap"></use></svg></span><span class="sys-text"><b>SAP S/4HANA</b><i class="green">CONNECTED</i></span></div>
+        <div class="sys-item"><span class="sys-icon"><svg class="ic"><use href="#i-apriso"></use></svg></span><span class="sys-text"><b>Apriso MES</b><i class="green">CONNECTED</i></span></div>
+        <div class="sys-item"><span class="sys-icon"><svg class="ic"><use href="#i-opc"></use></svg></span><span class="sys-text"><b>OPC UA Gateway</b><i class="green">CONNECTED</i></span></div>
+        <div class="sys-item"><span class="sys-icon"><svg class="ic"><use href="#i-plc"></use></svg></span><span class="sys-text"><b>PLC</b><i class="green">HEALTHY</i></span></div>
+        <div class="sys-item"><span class="sys-icon"><svg class="ic"><use href="#i-historian"></use></svg></span><span class="sys-text"><b>Historian</b><i class="green">CONNECTED</i></span></div>
+        <div class="sys-item"><span class="sys-icon"><svg class="ic"><use href="#i-database"></use></svg></span><span class="sys-text"><b>Database</b><i class="green">SYNCED</i></span></div>
+        <div class="sys-item"><span class="sys-icon"><svg class="ic"><use href="#i-printer"></use></svg></span><span class="sys-text"><b>Label Printer</b><i class="green">READY</i></span></div>
+        <div class="sys-item"><span class="sys-icon"><svg class="ic"><use href="#i-network"></use></svg></span><span class="sys-text"><b>Network</b><i class="green">HEALTHY</i></span></div>
+      </div>
+    </div>
+
+    <div class="andon-block">
+      <div class="footer-title right">ANDON STATUS</div>
+      <div class="andon-grid">
+        <div class="andon andon-green"><span>PRODUCTION</span><b>0</b></div>
+        <div class="andon andon-yellow"><span>QUALITY</span><b>0</b></div>
+        <div class="andon andon-orange"><span>MATERIAL</span><b>1</b></div>
+        <div class="andon andon-red"><span>MAINTENANCE</span><b>0</b></div>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- /app -->
+</body>
+</html>
