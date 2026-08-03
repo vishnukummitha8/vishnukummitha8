@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DELMIA Apriso MES - Station 02</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="mes-dashboard">
+
+    <!-- Global Header -->
+    <header class="global-header">
+      <div class="header-left">
+        <div class="logo">
+          <span class="logo-icon">◆</span>
+          <div class="logo-text">
+            <span class="logo-brand">DELMIA</span>
+            <span class="logo-sub">Apriso MES</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-center">
+        <div class="station-info">
+          <div class="station-icon">
+            <svg viewBox="0 0 48 48" width="40" height="40">
+              <circle cx="24" cy="24" r="20" fill="none" stroke="#fff" stroke-width="2"/>
+              <path d="M14 30 L24 14 L34 30" fill="none" stroke="#fff" stroke-width="2"/>
+              <line x1="18" y1="26" x2="30" y2="26" stroke="#fff" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="station-titles">
+            <h1>STATION 02 - FRONT SUSPENSION ASSEMBLY</h1>
+            <p>Install Lower Arm, Strut, Knuckle, Stabilizer</p>
+          </div>
+        </div>
+
+        <div class="header-info-boxes">
+          <div class="info-box">
+            <span class="info-label">Production Order</span>
+            <span class="info-value">PO-24-0009876</span>
+          </div>
+          <div class="info-box">
+            <span class="info-label">VIN</span>
+            <span class="info-value vin">MA1AB2SU0R64012345</span>
+          </div>
+          <div class="info-box">
+            <span class="info-label">Model / Variant</span>
+            <span class="info-value">SUV-X / XZA 2.0 AT</span>
+          </div>
+          <div class="info-box">
+            <span class="info-label">Sequence No</span>
+            <span class="info-value">00025</span>
+          </div>
+          <div class="info-box">
+            <span class="info-label">Shift</span>
+            <span class="info-value">A</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <div class="user-profile">
+          <div class="avatar">
+            <svg viewBox="0 0 24 24" width="32" height="32">
+              <circle cx="12" cy="8" r="4" fill="#fff"/>
+              <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" fill="#fff"/>
+            </svg>
+          </div>
+          <div class="user-details">
+            <span class="user-name">Operator: RAMESH K | OP10345 | Level 2</span>
+            <span class="datetime">31-May-2025, 10:24:35 AM</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- High-Level Status Bar -->
+    <section class="status-bar">
+      <div class="status-card">
+        <span class="status-icon running">▶</span>
+        <div class="status-content">
+          <span class="status-label">Station Status</span>
+          <span class="status-value success">RUNNING</span>
+        </div>
+      </div>
+      <div class="status-card">
+        <span class="status-icon">🚗</span>
+        <div class="status-content">
+          <span class="status-label">Vehicle Status</span>
+          <span class="status-value">AT STATION</span>
+        </div>
+      </div>
+      <div class="status-card">
+        <span class="status-icon">📋</span>
+        <div class="status-content">
+          <span class="status-label">Order Status</span>
+          <span class="status-value success">RELEASED</span>
+        </div>
+      </div>
+      <div class="status-card">
+        <span class="status-icon">✓</span>
+        <div class="status-content">
+          <span class="status-label">Variant Validation</span>
+          <span class="status-value success">MATCHED</span>
+        </div>
+      </div>
+      <div class="status-card">
+        <div class="status-content">
+          <span class="status-label">Target Cycle Time</span>
+          <span class="status-value">180 sec</span>
+        </div>
+      </div>
+      <div class="status-card">
+        <div class="status-content">
+          <span class="status-label">Actual Cycle Time</span>
+          <span class="status-value success">132 sec</span>
+        </div>
+      </div>
+      <div class="status-card oee-card">
+        <div class="status-content">
+          <span class="status-label">OEE</span>
+          <span class="status-value success">86.4%</span>
+        </div>
+        <div class="sparkline">
+          <svg viewBox="0 0 60 20" width="60" height="20">
+            <polyline points="0,15 10,12 20,14 30,8 40,10 50,5 60,7" fill="none" stroke="#28a745" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <!-- Left Column -->
+      <aside class="column left-column">
+
+        <!-- Vehicle & Order Information -->
+        <section class="panel vehicle-info-panel">
+          <div class="panel-header">
+            <h2>Vehicle &amp; Order Information</h2>
+          </div>
+          <div class="panel-body">
+            <div class="info-row"><span class="label">VIN</span><span class="value">MA1AB2SU0R64012345</span></div>
+            <div class="info-row"><span class="label">Model</span><span class="value">SUV-X</span></div>
+            <div class="info-row"><span class="label">Variant</span><span class="value">XZA 2.0 AT</span></div>
+            <div class="info-row"><span class="label">Color</span><span class="value">Pearl White</span></div>
+            <div class="info-row"><span class="label">Production Order</span><span class="value">PO-24-0009876</span></div>
+            <div class="info-row"><span class="label">Sequence No</span><span class="value">00025</span></div>
+            <div class="info-row"><span class="label">Shift</span><span class="value">A</span></div>
+            <div class="info-row"><span class="label">Line</span><span class="value">Assembly Line 1</span></div>
+          </div>
+        </section>
+
+        <!-- Component Verification -->
+        <section class="panel component-panel">
+          <div class="panel-header">
+            <h2>Component Verification</h2>
+          </div>
+          <div class="panel-body table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Component</th>
+                  <th>Side</th>
+                  <th>Part Number</th>
+                  <th>Serial Number</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Lower Control Arm</td>
+                  <td>LH</td>
+                  <td>LC-4521-A</td>
+                  <td>SN-LCA-001234</td>
+                  <td><span class="check-icon">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Lower Control Arm</td>
+                  <td>RH</td>
+                  <td>LC-4521-A</td>
+                  <td>SN-LCA-001235</td>
+                  <td><span class="check-icon">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Strut Assembly</td>
+                  <td>LH</td>
+                  <td>ST-7832-B</td>
+                  <td>SN-STR-002341</td>
+                  <td><span class="check-icon">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Strut Assembly</td>
+                  <td>RH</td>
+                  <td>ST-7832-B</td>
+                  <td>SN-STR-002342</td>
+                  <td><span class="check-icon">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Steering Knuckle</td>
+                  <td>LH</td>
+                  <td>SK-1190-C</td>
+                  <td>SN-SKN-003451</td>
+                  <td><span class="check-icon">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Steering Knuckle</td>
+                  <td>RH</td>
+                  <td>SK-1190-C</td>
+                  <td>SN-SKN-003452</td>
+                  <td><span class="check-icon">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Stabilizer Bar Link</td>
+                  <td>LH</td>
+                  <td>SB-3345-D</td>
+                  <td>SN-SBL-004561</td>
+                  <td><span class="check-icon">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Stabilizer Bar Link</td>
+                  <td>RH</td>
+                  <td>SB-3345-D</td>
+                  <td>SN-SBL-004562</td>
+                  <td><span class="check-icon">✓</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Quality Checklist -->
+        <section class="panel quality-panel">
+          <div class="panel-header">
+            <h2>Quality Checklist</h2>
+          </div>
+          <div class="panel-body table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Check Point</th>
+                  <th>Result</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Lower Arm Torque Verification</td>
+                  <td><span class="result-pass">Pass</span></td>
+                </tr>
+                <tr>
+                  <td>Strut Mount Alignment</td>
+                  <td><span class="result-pass">Pass</span></td>
+                </tr>
+                <tr>
+                  <td>Knuckle Bearing Preload</td>
+                  <td><span class="result-pass">Pass</span></td>
+                </tr>
+                <tr>
+                  <td>Stabilizer Link Connection</td>
+                  <td><span class="result-pass">Pass</span></td>
+                </tr>
+                <tr>
+                  <td>Bolt Thread Engagement</td>
+                  <td><span class="result-pass">Pass</span></td>
+                </tr>
+                <tr>
+                  <td>Visual Inspection - No Damage</td>
+                  <td><span class="result-pass">Pass</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="panel-footer">
+            <button class="btn btn-dark-blue">VIEW INSPECTION</button>
+            <button class="btn btn-medium-blue">DEFECT LOG</button>
+          </div>
+        </section>
+      </aside>
+
+      <!-- Middle Column -->
+      <section class="column middle-column">
+
+        <!-- Digital Work Instruction -->
+        <section class="panel work-instruction-panel">
+          <div class="panel-header">
+            <h2>Digital Work Instruction</h2>
+          </div>
+          <div class="step-tabs">
+            <button class="step-tab active">STEP 1</button>
+            <button class="step-tab">STEP 2</button>
+            <button class="step-tab">STEP 3</button>
+            <button class="step-tab">STEP 4</button>
+            <button class="step-tab">STEP 5</button>
+            <button class="step-tab list-tab">☰</button>
+          </div>
+          <div class="work-instruction-content">
+            <div class="instruction-image">
+              <svg viewBox="0 0 400 280" class="suspension-diagram">
+                <rect width="400" height="280" fill="#f0f4f8"/>
+                <!-- Axle -->
+                <rect x="80" y="180" width="240" height="20" rx="4" fill="#555"/>
+                <!-- Strut LH -->
+                <rect x="100" y="80" width="30" height="100" rx="3" fill="#888"/>
+                <circle cx="115" cy="70" r="20" fill="#666"/>
+                <!-- Strut RH -->
+                <rect x="270" y="80" width="30" height="100" rx="3" fill="#888"/>
+                <circle cx="285" cy="70" r="20" fill="#666"/>
+                <!-- Lower arms -->
+                <line x1="115" y1="180" x2="60" y2="220" stroke="#777" stroke-width="8"/>
+                <line x1="285" y1="180" x2="340" y2="220" stroke="#777" stroke-width="8"/>
+                <!-- Callouts -->
+                <circle cx="115" cy="50" r="14" fill="#ff6600"/>
+                <text x="115" y="55" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">1</text>
+                <text x="140" y="55" fill="#ff6600" font-size="11" font-weight="bold">Strut Assembly</text>
+                <circle cx="60" cy="230" r="14" fill="#ff6600"/>
+                <text x="60" y="235" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">2</text>
+                <text x="80" y="250" fill="#ff6600" font-size="11" font-weight="bold">Lower Arm</text>
+                <circle cx="200" cy="190" r="14" fill="#ff6600"/>
+                <text x="200" y="195" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">3</text>
+                <text x="220" y="195" fill="#ff6600" font-size="11" font-weight="bold">Steering Knuckle</text>
+                <circle cx="340" cy="230" r="14" fill="#ff6600"/>
+                <text x="340" y="235" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">4</text>
+                <text x="300" y="250" fill="#ff6600" font-size="11" font-weight="bold">Stabilizer</text>
+              </svg>
+            </div>
+            <div class="instruction-steps">
+              <ol>
+                <li>Position the lower control arm into the subframe mounting points.</li>
+                <li>Install and hand-tighten the lower arm bolts (LH &amp; RH).</li>
+                <li>Mount the strut assembly onto the steering knuckle.</li>
+                <li>Connect the stabilizer bar link to the lower control arm.</li>
+              </ol>
+            </div>
+          </div>
+          <div class="safety-box">
+            <span class="safety-icon">⚠</span>
+            <div class="safety-content">
+              <strong>Safety Instructions:</strong>
+              <ul>
+                <li>Wear safety gloves and eye protection at all times.</li>
+                <li>Ensure vehicle is properly secured on the lift.</li>
+                <li>Do not exceed specified torque values.</li>
+                <li>Report any damaged components immediately.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="instruction-footer">
+            <button class="action-btn btn-red">📄 PDF/SOP</button>
+            <button class="action-btn btn-blue">📋 PART LIST</button>
+            <button class="action-btn btn-orange">🔧 TORQUE SHEET</button>
+            <button class="action-btn btn-teal">🔄 3D VIEW</button>
+            <button class="action-btn btn-purple">▶ VIDEO</button>
+          </div>
+        </section>
+
+        <!-- Variant & BOM Validation -->
+        <section class="panel bom-panel">
+          <div class="panel-header">
+            <h2>Variant &amp; BOM Validation</h2>
+          </div>
+          <div class="panel-body">
+            <div class="bom-summary">
+              <span class="bom-matched">✓ BOM Matched</span>
+            </div>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Part Number</th>
+                  <th>Description</th>
+                  <th>Qty</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>LC-4521-A</td>
+                  <td>Lower Control Arm</td>
+                  <td>2</td>
+                  <td><span class="check-icon">✓</span></td>
+                </tr>
+                <tr>
+                  <td>ST-7832-B</td>
+                  <td>Strut Assembly</td>
+                  <td>2</td>
+                  <td><span class="check-icon">✓</span></td>
+                </tr>
+                <tr>
+                  <td>SK-1190-C</td>
+                  <td>Steering Knuckle</td>
+                  <td>2</td>
+                  <td><span class="check-icon">✓</span></td>
+                </tr>
+                <tr>
+                  <td>SB-3345-D</td>
+                  <td>Stabilizer Bar Link</td>
+                  <td>2</td>
+                  <td><span class="check-icon">✓</span></td>
+                </tr>
+                <tr>
+                  <td>BL-2210-E</td>
+                  <td>Mounting Bolt M12x80</td>
+                  <td>8</td>
+                  <td><span class="check-icon">✓</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Genealogy -->
+        <section class="panel genealogy-panel">
+          <div class="panel-header">
+            <h2>Genealogy (VIN Traceability)</h2>
+          </div>
+          <div class="panel-body">
+            <div class="genealogy-meta">
+              <span><strong>VIN:</strong> MA1AB2SU0R64012345</span>
+              <span><strong>Operator:</strong> RAMESH K</span>
+              <span><strong>Start:</strong> 10:22:03 AM</span>
+              <span><strong>End:</strong> —</span>
+            </div>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Component</th>
+                  <th>Serial Number</th>
+                  <th>Timestamp</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Lower Control Arm LH</td>
+                  <td>SN-LCA-001234</td>
+                  <td>10:22:15</td>
+                </tr>
+                <tr>
+                  <td>Lower Control Arm RH</td>
+                  <td>SN-LCA-001235</td>
+                  <td>10:22:28</td>
+                </tr>
+                <tr>
+                  <td>Strut Assembly LH</td>
+                  <td>SN-STR-002341</td>
+                  <td>10:23:01</td>
+                </tr>
+                <tr>
+                  <td>Strut Assembly RH</td>
+                  <td>SN-STR-002342</td>
+                  <td>10:23:18</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="panel-footer">
+            <button class="btn btn-dark-blue">VIEW FULL GENEALOGY</button>
+          </div>
+        </section>
+
+        <!-- Station KPIs -->
+        <section class="panel kpi-panel">
+          <div class="panel-header">
+            <h2>Station KPIs</h2>
+          </div>
+          <div class="kpi-grid">
+            <div class="kpi-item">
+              <span class="kpi-label">Cycle Time</span>
+              <span class="kpi-value">132</span>
+            </div>
+            <div class="kpi-item">
+              <span class="kpi-label">Target</span>
+              <span class="kpi-value">180</span>
+            </div>
+            <div class="kpi-item">
+              <span class="kpi-label">Efficiency</span>
+              <span class="kpi-value warning">73%</span>
+            </div>
+            <div class="kpi-item">
+              <span class="kpi-label">OEE</span>
+              <span class="kpi-value success">86.4%</span>
+            </div>
+            <div class="kpi-item">
+              <span class="kpi-label">FTR</span>
+              <span class="kpi-value success">98.7%</span>
+            </div>
+            <div class="kpi-item">
+              <span class="kpi-label">Good</span>
+              <span class="kpi-value">325</span>
+            </div>
+            <div class="kpi-item">
+              <span class="kpi-label">Reject</span>
+              <span class="kpi-value danger">4</span>
+            </div>
+            <div class="kpi-item">
+              <span class="kpi-label">Rework</span>
+              <span class="kpi-value warning">2</span>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- Right Column -->
+      <aside class="column right-column">
+
+        <!-- Torque Management -->
+        <section class="panel torque-panel">
+          <div class="panel-header">
+            <h2>Torque Management</h2>
+          </div>
+          <div class="torque-status">
+            <span class="tool-status success">Tool Status: CONNECTED</span>
+            <span class="calibration-info">Cal: 28-May-2025 | Next: 28-Aug-2025</span>
+          </div>
+          <div class="axle-diagram">
+            <svg viewBox="0 0 300 200" class="axle-svg">
+              <rect width="300" height="200" fill="#1a2744"/>
+              <!-- Axle shape -->
+              <ellipse cx="150" cy="100" rx="120" ry="40" fill="none" stroke="#4a6fa5" stroke-width="3"/>
+              <rect x="60" y="85" width="180" height="30" rx="5" fill="#2a3f6a"/>
+              <!-- Bolt positions -->
+              <circle cx="80" cy="100" r="12" fill="#28a745"/><text x="80" y="104" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">1</text>
+              <circle cx="110" cy="75" r="12" fill="#28a745"/><text x="110" y="79" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">2</text>
+              <circle cx="150" cy="65" r="12" fill="#28a745"/><text x="150" y="69" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">3</text>
+              <circle cx="190" cy="75" r="12" fill="#28a745"/><text x="190" y="79" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">4</text>
+              <circle cx="220" cy="100" r="12" fill="#28a745"/><text x="220" y="104" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">5</text>
+              <circle cx="190" cy="125" r="12" fill="#28a745"/><text x="190" y="129" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">6</text>
+              <circle cx="150" cy="135" r="12" fill="#28a745"/><text x="150" y="139" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">7</text>
+              <circle cx="110" cy="125" r="12" fill="#28a745"/><text x="110" y="129" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">8</text>
+            </svg>
+          </div>
+          <div class="panel-body table-container">
+            <table class="data-table torque-table">
+              <thead>
+                <tr>
+                  <th>Bolt</th>
+                  <th>Target Nm</th>
+                  <th>Actual Nm</th>
+                  <th>Curve</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>85</td>
+                  <td class="success">84.7</td>
+                  <td><svg viewBox="0 0 40 16" width="40" height="16"><polyline points="0,14 8,10 16,8 24,6 32,4 40,2" fill="none" stroke="#28a745" stroke-width="1.5"/></svg></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>85</td>
+                  <td class="success">85.2</td>
+                  <td><svg viewBox="0 0 40 16" width="40" height="16"><polyline points="0,14 8,10 16,8 24,6 32,4 40,2" fill="none" stroke="#28a745" stroke-width="1.5"/></svg></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>120</td>
+                  <td class="success">119.8</td>
+                  <td><svg viewBox="0 0 40 16" width="40" height="16"><polyline points="0,14 8,10 16,8 24,6 32,4 40,2" fill="none" stroke="#28a745" stroke-width="1.5"/></svg></td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>120</td>
+                  <td class="success">120.1</td>
+                  <td><svg viewBox="0 0 40 16" width="40" height="16"><polyline points="0,14 8,10 16,8 24,6 32,4 40,2" fill="none" stroke="#28a745" stroke-width="1.5"/></svg></td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>85</td>
+                  <td class="success">84.9</td>
+                  <td><svg viewBox="0 0 40 16" width="40" height="16"><polyline points="0,14 8,10 16,8 24,6 32,4 40,2" fill="none" stroke="#28a745" stroke-width="1.5"/></svg></td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>85</td>
+                  <td class="success">85.0</td>
+                  <td><svg viewBox="0 0 40 16" width="40" height="16"><polyline points="0,14 8,10 16,8 24,6 32,4 40,2" fill="none" stroke="#28a745" stroke-width="1.5"/></svg></td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>65</td>
+                  <td class="success">64.8</td>
+                  <td><svg viewBox="0 0 40 16" width="40" height="16"><polyline points="0,14 8,10 16,8 24,6 32,4 40,2" fill="none" stroke="#28a745" stroke-width="1.5"/></svg></td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>65</td>
+                  <td class="success">65.3</td>
+                  <td><svg viewBox="0 0 40 16" width="40" height="16"><polyline points="0,14 8,10 16,8 24,6 32,4 40,2" fill="none" stroke="#28a745" stroke-width="1.5"/></svg></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="torque-complete-banner">
+            ✓ ALL TORQUE POINTS COMPLETED
+          </div>
+        </section>
+
+        <!-- Equipment Status -->
+        <section class="panel equipment-panel">
+          <div class="panel-header">
+            <h2>Equipment Status</h2>
+          </div>
+          <div class="equipment-grid">
+            <div class="equipment-card">
+              <span class="equip-icon">🔧</span>
+              <span class="equip-name">Smart Torque Tool</span>
+              <span class="equip-status success">Connected</span>
+            </div>
+            <div class="equipment-card">
+              <span class="equip-icon">📷</span>
+              <span class="equip-name">Barcode Scanner</span>
+              <span class="equip-status success">Ready</span>
+            </div>
+            <div class="equipment-card">
+              <span class="equip-icon">📡</span>
+              <span class="equip-name">RFID Reader</span>
+              <span class="equip-status success">Connected</span>
+            </div>
+            <div class="equipment-card">
+              <span class="equip-icon">🖥️</span>
+              <span class="equip-name">HMI Terminal</span>
+              <span class="equip-status success">Healthy</span>
+            </div>
+            <div class="equipment-card">
+              <span class="equip-icon">⚙️</span>
+              <span class="equip-name">PLC Controller</span>
+              <span class="equip-status success">Connected</span>
+            </div>
+            <div class="equipment-card">
+              <span class="equip-icon">📊</span>
+              <span class="equip-name">Andon Display</span>
+              <span class="equip-status success">Ready</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Station Actions -->
+        <section class="panel actions-panel">
+          <div class="panel-header">
+            <h2>Station Actions</h2>
+          </div>
+          <div class="actions-grid">
+            <button class="station-btn btn-start">
+              <span class="btn-icon">▶</span>
+              <span>START JOB</span>
+            </button>
+            <button class="station-btn btn-hold">
+              <span class="btn-icon">⏸</span>
+              <span>HOLD</span>
+            </button>
+            <button class="station-btn btn-resume">
+              <span class="btn-icon">⏵</span>
+              <span>RESUME</span>
+            </button>
+            <button class="station-btn btn-quality">
+              <span class="btn-icon">🔍</span>
+              <span>REQUEST QUALITY</span>
+            </button>
+            <button class="station-btn btn-maintenance">
+              <span class="btn-icon">🔧</span>
+              <span>CALL MAINTENANCE</span>
+            </button>
+            <button class="station-btn btn-complete">
+              <span class="btn-icon">🏁</span>
+              <span>COMPLETE STATION</span>
+            </button>
+          </div>
+        </section>
+      </aside>
+    </main>
+
+    <!-- Bottom Footer -->
+    <footer class="bottom-footer">
+      <div class="integration-status">
+        <span class="integration-label">System Integration Status</span>
+        <div class="integration-logos">
+          <div class="integration-item"><span class="int-logo">SAP</span><span class="int-status success">CONNECTED</span></div>
+          <div class="integration-item"><span class="int-logo">Apriso</span><span class="int-status success">CONNECTED</span></div>
+          <div class="integration-item"><span class="int-logo">PLC</span><span class="int-status success">HEALTHY</span></div>
+          <div class="integration-item"><span class="int-logo">MES</span><span class="int-status success">CONNECTED</span></div>
+          <div class="integration-item"><span class="int-logo">QMS</span><span class="int-status success">CONNECTED</span></div>
+          <div class="integration-item"><span class="int-logo">WMS</span><span class="int-status success">HEALTHY</span></div>
+          <div class="integration-item"><span class="int-logo">ERP</span><span class="int-status success">CONNECTED</span></div>
+          <div class="integration-item"><span class="int-logo">SCADA</span><span class="int-status success">HEALTHY</span></div>
+        </div>
+      </div>
+      <div class="andon-status">
+        <div class="andon-box andon-production">
+          <span class="andon-label">PRODUCTION</span>
+          <span class="andon-count">0</span>
+        </div>
+        <div class="andon-box andon-quality">
+          <span class="andon-label">QUALITY</span>
+          <span class="andon-count">0</span>
+        </div>
+        <div class="andon-box andon-material">
+          <span class="andon-label">MATERIAL</span>
+          <span class="andon-count">1</span>
+        </div>
+        <div class="andon-box andon-maintenance">
+          <span class="andon-label">MAINTENANCE</span>
+          <span class="andon-count">0</span>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    // Step tab switching
+    document.querySelectorAll('.step-tab').forEach(tab => {
+      tab.addEventListener('click', function() {
+        document.querySelectorAll('.step-tab').forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
