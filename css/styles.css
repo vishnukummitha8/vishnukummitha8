@@ -27,18 +27,56 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+  overflow: auto;
+  scrollbar-width: auto;
+  scrollbar-color: #8899aa var(--bg-light);
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background: var(--bg-light);
+}
+
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background: #8899aa;
+  border-radius: 6px;
+  border: 2px solid var(--bg-light);
+}
+
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover {
+  background: #667788;
+}
+
+html::-webkit-scrollbar-corner,
+body::-webkit-scrollbar-corner {
+  background: var(--bg-light);
+}
+
 body {
   font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
   font-size: 12px;
   background: var(--bg-light);
   color: var(--text-dark);
-  overflow-x: hidden;
+  min-height: 100%;
+  overflow: auto;
 }
 
 .mes-dashboard {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  min-width: 1400px;
+  width: 100%;
 }
 
 /* ========== GLOBAL HEADER ========== */
@@ -246,6 +284,7 @@ body {
   gap: 10px;
   padding: 10px 12px;
   flex: 1;
+  min-width: 0;
 }
 
 .column {
@@ -306,7 +345,8 @@ body {
 }
 
 .table-container {
-  overflow-x: auto;
+  overflow: auto;
+  max-width: 100%;
 }
 
 .data-table {
@@ -773,64 +813,4 @@ body {
 .danger { color: var(--danger-red); }
 
 /* ========== RESPONSIVE ========== */
-@media (max-width: 1400px) {
-  .main-content {
-    grid-template-columns: 260px 1fr 300px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .main-content {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .right-column {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
-  }
-
-  .right-column .panel {
-    margin: 0;
-  }
-}
-
-@media (max-width: 900px) {
-  .main-content {
-    grid-template-columns: 1fr;
-  }
-
-  .right-column {
-    grid-template-columns: 1fr;
-  }
-
-  .global-header {
-    flex-direction: column;
-  }
-
-  .header-info-boxes {
-    flex-wrap: wrap;
-  }
-
-  .status-bar {
-    flex-wrap: wrap;
-  }
-
-  .work-instruction-content {
-    flex-direction: column;
-  }
-
-  .instruction-steps {
-    flex: 1;
-  }
-
-  .bottom-footer {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .andon-status {
-    justify-content: center;
-  }
-}
+/* Layout keeps full desktop width; use page scrollbars when viewport is smaller */
