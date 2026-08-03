@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DELMIA Apriso MES — Station 02</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="dashboard">
+      <header class="topbar">
+        <div class="brand"><span class="brand-mark">◒</span><span>DELMIA</span><small>Apriso MES</small></div>
+        <div class="station-title"><span class="suspension-icon">⚙</span><div><b>STATION 02 - FRONT SUSPENSION ASSEMBLY</b><small>Install Lower Arm, Strut, Knuckle, Stabilizer</small></div></div>
+        <div class="top-detail"><small>Production Order</small><b>PO-24-0009876</b></div>
+        <div class="top-detail vin"><small>VIN</small><b>MA1AB2SU0R64012345</b></div>
+        <div class="top-detail"><small>Model / Variant</small><b>SUV-X / XZA 2.0 AT</b></div>
+        <div class="top-detail"><small>Sequence No.</small><b>00025</b></div>
+        <div class="top-detail centered"><small>Shift</small><b>A</b></div>
+        <div class="operator"><span>♙</span><div><small>Operator</small><b>RAMESH K</b><em>OP10345 | Level 2</em></div></div>
+        <div class="date">31-May-2025<br /><b>10:24:35 AM</b></div>
+      </header>
+
+      <section class="summary-row">
+        <div class="summary"><small>STATION STATUS</small><b class="green">RUNNING</b><span class="play">▶</span></div>
+        <div class="summary"><span class="summary-icon">▰</span><small>VEHICLE STATUS</small><b>AT STATION</b></div>
+        <div class="summary"><span class="summary-icon">▣</span><small>ORDER STATUS</small><b class="green">RELEASED</b></div>
+        <div class="summary"><small>VARIANT VALIDATION</small><b class="green">● MATCHED</b></div>
+        <div class="summary metric"><small>TARGET CYCLE TIME</small><b>180 <em>sec</em></b></div>
+        <div class="summary metric"><small>ACTUAL CYCLE TIME</small><b class="green">132 <em>sec</em></b></div>
+        <div class="summary metric"><small>OEE</small><b>86.4 %</b><span>⌁</span></div>
+      </section>
+
+      <section class="content-grid">
+        <aside class="left-column">
+          <section class="panel vehicle-panel">
+            <h2>VEHICLE &amp; ORDER INFORMATION</h2>
+            <dl>
+              <dt>VIN</dt><dd class="green">MA1AB2SU0R64012345</dd><dt>Model</dt><dd>SUV-X</dd><dt>Variant</dt><dd>XZA 2.0 AT</dd>
+              <dt>Color</dt><dd>Pearl White</dd><dt>Production Order</dt><dd>PO-24-0009876</dd><dt>Sequence No.</dt><dd>00025</dd>
+              <dt>Routing</dt><dd>GA-FS-02</dd><dt>BOM Version</dt><dd>BOM-11</dd><dt>Release Date</dt><dd>31-May-2025</dd>
+            </dl>
+          </section>
+          <section class="panel table-panel component-panel">
+            <h2>COMPONENT VERIFICATION</h2>
+            <table><thead><tr><th>Component</th><th>Side</th><th>Part Number</th><th>Serial / Batch No.</th><th>Status</th></tr></thead>
+              <tbody id="componentRows"></tbody>
+            </table>
+          </section>
+          <section class="panel table-panel quality-panel">
+            <h2>QUALITY CHECKLIST</h2>
+            <table><thead><tr><th>Check Point</th><th>Result</th></tr></thead><tbody>
+              <tr><td>Lower Arm Installation</td><td class="pass">Pass</td></tr><tr><td>Strut Assembly</td><td class="pass">Pass</td></tr><tr><td>Knuckle Installation</td><td class="pass">Pass</td></tr><tr><td>Stabilizer Assembly</td><td class="pass">Pass</td></tr><tr><td>All Torque Points Completed</td><td class="pass">Pass</td></tr><tr><td>Overall Visual Inspection</td><td class="pass">Pass</td></tr>
+            </tbody></table>
+            <div class="mini-actions"><button>VIEW INSPECTION</button><button>DEFECT LOG</button></div>
+          </section>
+        </aside>
+
+        <section class="center-column">
+          <section class="panel work-panel">
+            <h2>DIGITAL WORK INSTRUCTION</h2>
+            <div class="work-body">
+              <div class="assembly-art" aria-label="Front suspension assembly illustration">
+                <div class="spring"></div><div class="strut"></div><div class="hub"></div><div class="arm arm-one"></div><div class="arm arm-two"></div><div class="bar"></div>
+                <span class="callout c1">Strut Assembly</span><span class="callout c2">Steering Knuckle</span><span class="callout c3">Stabilizer Bar</span><span class="callout c4">Lower Control Arm</span>
+              </div>
+              <div class="instructions">
+                <nav class="steps"><button class="active" data-step="1">STEP 1</button><button data-step="2">STEP 2</button><button data-step="3">STEP 3</button><button data-step="4">STEP 4</button><button data-step="5">STEP 5</button></nav>
+                <article id="stepContent"></article>
+                <div class="safety"><b>⚠ &nbsp; SAFETY INSTRUCTIONS</b><ul><li>Ensure vehicle is in safe position.</li><li>Do not place hands under suspension.</li><li>Wear safety gloves and shoes.</li><li>Follow ergonomic lifting procedure.</li></ul></div>
+              </div>
+            </div>
+            <div class="work-tools"><button>▣ &nbsp; PDF / SOP</button><button>▤ &nbsp; PART LIST</button><button class="orange">☷ &nbsp; TORQUE SHEET</button><button>◇ &nbsp; 3D VIEW</button><button>▣ &nbsp; VIDEO</button></div>
+          </section>
+
+          <section class="bottom-center">
+            <section class="panel table-panel bom-panel"><h2>VARIANT &amp; BOM VALIDATION</h2>
+              <div class="bom-head"><span>Model <b>SUV-X</b></span><span>Variant <b>XZA 2.0 AT</b></span><span class="green">BOM MATCHED<br />●</span></div>
+              <table><thead><tr><th>Component</th><th>Required Part Number</th><th>Scanned Part Number</th><th>Match Status</th></tr></thead><tbody id="bomRows"></tbody></table>
+              <div class="legend"><span>● Match</span><span>● Mismatch</span><span>● Not scanned</span></div>
+            </section>
+            <section class="panel table-panel genealogy-panel"><h2>GENEALOGY (VIN TRACEABILITY)</h2>
+              <div class="genealogy-info"><b>VIN</b> MA1AB2SU0R64012345<br /><b>Station</b> 02 - Front Suspension<br /><b>Operator</b> RAMESH K (OP10345)<br /><b>Start Time</b> 31-May-2025 10:18:24 AM<br /><b>End Time</b> 31-May-2025 10:24:35 AM</div>
+              <table><thead><tr><th>Component</th><th>Serial / Batch No.</th><th>Install Time</th></tr></thead><tbody id="genealogyRows"></tbody></table><button class="full-genealogy">VIEW FULL GENEALOGY</button>
+            </section>
+          </section>
+        </section>
+
+        <aside class="right-column">
+          <section class="panel torque-panel"><h2>TORQUE MANAGEMENT</h2><div class="torque-status"><span>Tool Status <b class="green">CONNECTED</b></span><span>Tool Id <b>ST-DCN-10-02</b></span><span>Calibration Due <b>15-Jun-2025 &nbsp; ✓</b></span></div><div class="axle-art">⚙<span>●</span><span>●</span><span>●</span><span>●</span><span>●</span><span>●</span></div>
+            <table><thead><tr><th>Step</th><th>Bolt Location</th><th>Target (Nm)</th><th>Actual (Nm)</th><th>Status</th><th>Curve</th></tr></thead><tbody id="torqueRows"></tbody></table><div class="torque-complete">✓ &nbsp; ALL TORQUE POINTS COMPLETED</div>
+          </section>
+          <section class="panel equipment-panel"><h2>EQUIPMENT STATUS</h2><div class="equipment-grid"><span>⚒ Smart Torque Tool <b>Connected</b></span><span>♜ Lift Assist <b>Ready</b></span><span>⌁ Barcode Scanner <b>Connected</b></span><span>♖ Conveyor <b>Running</b></span><span>◉ Vision Camera <b>Connected</b></span><span>▣ PLC / IO <b>Healthy</b></span></div></section>
+          <section class="panel actions-panel"><h2>STATION ACTIONS</h2><div class="action-grid"><button class="start" id="startBtn">▶ &nbsp; START JOB</button><button class="hold" id="holdBtn">▮▮ &nbsp; HOLD</button><button class="resume" id="resumeBtn">▶ &nbsp; RESUME</button><button class="quality">♟ &nbsp; REQUEST QUALITY</button><button class="maintenance">⚒ &nbsp; CALL MAINTENANCE</button><button class="complete" id="completeBtn">⚑ &nbsp; COMPLETE STATION</button></div></section>
+        </aside>
+      </section>
+
+      <section class="kpis"><div><small>Cycle Time (sec)</small><b>180</b></div><div><small>Target (sec)</small><b>180</b></div><div><small>Efficiency</small><b class="orange-text">73%</b></div><div><small>OEE</small><b class="green">86.4%</b></div><div><small>FTR</small><b class="green">98.7%</b></div><div><small>Good Count</small><b>325</b></div><div><small>Reject Count</small><b class="red">4</b></div><div><small>Rework Count</small><b class="orange-text">2</b></div></section>
+      <footer><div><b>SAP</b><small>SAP S/4HANA<br /><i>CONNECTED</i></small></div><div><b>◒</b><small>Apriso MES<br /><i>CONNECTED</i></small></div><div><b>OPC</b><small>OPC UA Gateway<br /><i>CONNECTED</i></small></div><div><b>PLC</b><small>PLC<br /><i>HEALTHY</i></small></div><div><b>▥</b><small>Historian<br /><i>CONNECTED</i></small></div><div><b>◉</b><small>Database<br /><i>SYNCED</i></small></div><div><b>▣</b><small>Label Printer<br /><i>READY</i></small></div><div><b>⌁</b><small>Network<br /><i>HEALTHY</i></small></div><div class="production">PRODUCTION<br /><b>0</b></div><div class="quality-footer">QUALITY<br /><b>0</b></div><div class="material">MATERIAL<br /><b>1</b></div><div class="maintenance-footer">MAINTENANCE<br /><b>0</b></div></footer>
+    </main>
+    <div id="toast" role="status"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
