@@ -280,7 +280,7 @@ button {
 
 .main-grid {
   display: grid;
-  grid-template-columns: 300px 1fr 360px;
+  grid-template-columns: 310px 1fr 360px;
   gap: 8px;
   align-items: start;
 }
@@ -377,6 +377,35 @@ button {
 
 .data-table tbody tr:nth-child(even) {
   background: #f7fafc;
+}
+
+/* Compact variant for narrow left-column tables: allow wrapping so
+   long serial numbers never overflow the panel. */
+.compact-table {
+  font-size: 9px;
+  table-layout: fixed;
+}
+
+.compact-table th,
+.compact-table td {
+  padding: 3.5px 4px;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.compact-table th:nth-child(1),
+.compact-table td:nth-child(1) {
+  width: 24%;
+}
+
+.compact-table th:nth-child(2),
+.compact-table td:nth-child(2) {
+  width: 10%;
+}
+
+.compact-table th:nth-child(5),
+.compact-table td:nth-child(5) {
+  width: 11%;
 }
 
 .data-table td.tc {
@@ -837,15 +866,17 @@ button {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  padding: 11px 4px;
+  gap: 5px;
+  padding: 8px 4px;
+  min-height: 40px;
   border-radius: 6px;
   border: 1px solid transparent;
-  font-size: 9.5px;
+  font-size: 9px;
   font-weight: 800;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.2px;
+  line-height: 1.25;
+  text-align: center;
   transition: filter 0.12s ease;
-  white-space: nowrap;
 }
 
 .action-btn:hover {
