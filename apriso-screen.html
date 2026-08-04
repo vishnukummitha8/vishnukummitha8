@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSW - Employee Registration | DELMIA Apriso</title>
+  <link rel="stylesheet" href="css/apriso-screen.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="viewport-wrapper" id="viewportWrapper">
+    <div class="apriso-app" id="aprisoApp">
+
+      <!-- Top Header -->
+      <header class="app-header">
+        <div class="header-left">
+          <div class="jsw-logo">
+            <span class="ds-icon">DS</span>
+            <span class="jsw-text">JSW</span>
+          </div>
+          <h1 class="screen-title">Employee Registration</h1>
+        </div>
+        <div class="header-center">
+          <div class="search-box">
+            <input type="text" id="findScreen" placeholder="Find a screen" aria-label="Find a screen">
+            <button class="search-btn" id="searchBtn" aria-label="Search">
+              <svg viewBox="0 0 24 24" width="16" height="16"><circle cx="10" cy="10" r="7" fill="none" stroke="#888" stroke-width="2"/><line x1="15" y1="15" x2="21" y2="21" stroke="#888" stroke-width="2"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="header-right">
+          <button class="user-avatar" id="userMenu" title="User Profile">Vi</button>
+          <button class="info-btn" id="infoBtn" title="Information">i</button>
+        </div>
+      </header>
+
+      <!-- Navigation Tabs -->
+      <nav class="tab-bar">
+        <button class="tab tab-home" data-tab="home">Home</button>
+        <button class="tab tab-active" data-tab="employee-registration">
+          Employee Registration
+          <span class="tab-close" id="closeTab" title="Close tab">&times;</span>
+        </button>
+      </nav>
+
+      <!-- Main Content -->
+      <main class="app-content">
+
+        <!-- Enter Details Section -->
+        <section class="fieldset-box">
+          <legend class="fieldset-legend">Enter Employee Details</legend>
+          <form id="employeeForm" class="detail-form" novalidate>
+
+            <div class="form-row">
+              <label for="name">Name :</label>
+              <div class="field-group">
+                <input type="text" id="name" name="name" class="text-input" placeholder="Enter employee name" autocomplete="off">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label for="id">ID :</label>
+              <div class="field-group">
+                <input type="text" id="id" name="id" class="text-input" placeholder="Enter employee ID" autocomplete="off">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label for="department">Department :</label>
+              <div class="field-group">
+                <input type="text" id="department" name="department" class="text-input" placeholder="Enter department" autocomplete="off">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label for="location">Location :</label>
+              <div class="field-group field-with-action">
+                <div class="select-wrapper">
+                  <select id="location" name="location" class="select-input">
+                    <option value="" disabled selected>Select Location</option>
+                    <option value="Plant 1 - Assembly">Plant 1 - Assembly</option>
+                    <option value="Plant 2 - Paint Shop">Plant 2 - Paint Shop</option>
+                    <option value="Plant 3 - Body Shop">Plant 3 - Body Shop</option>
+                    <option value="HQ - Corporate Office">HQ - Corporate Office</option>
+                    <option value="Warehouse - Spare Parts">Warehouse - Spare Parts</option>
+                  </select>
+                  <span class="select-arrow">▼</span>
+                </div>
+                <button type="submit" class="ok-btn" id="submitBtn">OK</button>
+              </div>
+            </div>
+
+          </form>
+        </section>
+
+        <!-- Record Details Table -->
+        <section class="fieldset-box table-section">
+          <legend class="fieldset-legend">Employee Details</legend>
+          <div class="table-wrapper">
+            <table class="data-table" id="employeeTable">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>ID</th>
+                  <th>Department</th>
+                  <th>Location</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="employeeTableBody">
+                <tr class="empty-row">
+                  <td colspan="5">List is empty</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- Status Bar -->
+      <footer class="status-bar">
+        <span class="status-item">Connected to JSWMRCPSNMESTST.jsw.in as VISHNU</span>
+        <span class="status-item">Design Mode: Enabled</span>
+        <span class="status-item" id="recordCount">Records: 0</span>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 id="modalTitle">Information</h3>
+        <button class="modal-close" id="modalClose">&times;</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+      <div class="modal-footer">
+        <button class="ok-btn modal-ok" id="modalOk">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/apriso-screen.js"></script>
+</body>
+</html>
